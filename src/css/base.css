@@ -41,12 +41,17 @@ address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: no
 
 ::-moz-selection { color: #000; background: #dbdbdb; }
 
-::-webkit-input-placeholder { color: #6f6f6f; text-overflow: ellipsis; }
+::-webkit-input-placeholder { color: #bbbbbb; text-overflow: ellipsis; }
 
-::-moz-placeholder { color: #6f6f6f; text-overflow: ellipsis; opacity: 1; }
+::-moz-placeholder { color: #bbbbbb; text-overflow: ellipsis; opacity: 1; }
 
-:-ms-input-placeholder { color: #6f6f6f; text-overflow: ellipsis; opacity: 1; }
+:-ms-input-placeholder { color: #bbbbbb; text-overflow: ellipsis; opacity: 1; }
 
 html, body { height: 100%; width: 100%; }
 
 .blind { position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px; }
+
+.btn { display: inline-block; text-align: center; font-size: 13px; }
+.btn.round { border-radius: 15px; }
+.btn.btn_gray { color: #fff; background-color: #cacaca; }
+.btn.btn_gray:hover { background-color: #2f5691; }

@@ -23,9 +23,9 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 
 ::selection { color: #000; background:#dbdbdb; }
 ::-moz-selection { color:#000; background:#dbdbdb; }
-::-webkit-input-placeholder { color: #6f6f6f; text-overflow: ellipsis;}
-::-moz-placeholder { color: #6f6f6f; text-overflow: ellipsis; opacity:1;}
-:-ms-input-placeholder { color: #6f6f6f; text-overflow: ellipsis; opacity:1;}
+::-webkit-input-placeholder { color: #bbbbbb; text-overflow: ellipsis;}
+::-moz-placeholder { color: #bbbbbb; text-overflow: ellipsis; opacity:1;}
+:-ms-input-placeholder { color: #bbbbbb; text-overflow: ellipsis; opacity:1;}
 
 
 html,
@@ -41,4 +41,20 @@ body{
     margin: -1px;
     width: 1px;
     height: 1px;
+}
+
+.btn{
+	&.round{
+		border-radius:15px;
+	}
+	display:inline-block;
+	text-align:center;
+	font-size:13px;	
+	&.btn_gray{
+		color:#fff;
+		background-color:#cacaca;
+		&:hover{
+			background-color:#2f5691;
+		}
+	}
 }
