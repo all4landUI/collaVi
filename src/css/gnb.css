@@ -1,0 +1,2 @@
+/** GNB **/
+#gnb { position: fixed; left: 0; top: 0; height: 100%; width: 70px; background-color: #fff; z-index: 10; }
