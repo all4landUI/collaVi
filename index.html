@@ -59,7 +59,7 @@
                     <!-- 로그아웃일때 
                     <button class="btn__login" role="button">로그인</a>
                     -->
-                    <a href="#" class="btn__logout" role="button"><i></i>로그아웃</a>
+                    <a href="#" class="btn__logout" role="button" onclick="app.modal(this,true)" aria-controls="facility"><i></i>로그아웃</a>
                 </div>
             </header>
             <!-- .search_header -->
@@ -318,14 +318,13 @@
         <div id="map">
             <div class="map_slider">
 				<div class="s_left image">
-                    <img src="images/thumb/img_map_main.jpg" alt="map">
+                    <img src="images/dummy.jpg" alt="map">
 				</div>
 				<div class="s_right image">
-                    <img src="images/thumb/img_map_air.jpg" alt="map">
+                    <img src="images/img_map_air.jpg" alt="map">
 				</div>
                 <div class="s_handle"></div>
 			</div>
-
         </div>
 
         <aside id="map_control">
@@ -397,14 +396,88 @@
             </div>
 
         </aside>    
-            
-
-
         <!-- #map_control -->
+
+
+        <article class="foot_wrap">
+           <div class="coord_control" title="X,Y좌표">
+               X : 127.XXXX<span class="slash" aria-hidden="true">/</span>Y : 38.XXXX
+               <button role="button" title="좌표로이동" class="btn_coord">이동</button>
+           </div> 
+           <div class="hmap_info">
+               물리LV: 07<span class="slash" aria-hidden="true">/</span>논리LV: 17<span class="slash" aria-hidden="true">/</span>도엽번호:37000000
+           </div>
+
+           <div class="hmap_scale" title="축적">
+               4KM
+           </div>
+        </article>
+
     </sectoin>
     <!-- .wrapper -->
-	
-	
+
+
+    <section id="facility" class="modal" aria-hidden="true">
+        <div class="container" role="dialog" aria-labelledby="fac_title" aria-modal="true">
+            <header class="modal_header">
+                <h3 id="fac_title">시설물정보</h3>
+            </header>
+            <div class="modal_body">
+                <div class="content">
+                    
+                </div>
+            </div>
+            <button role="button" class="btn_modal_close" onclick="app.modal('facility',false)" title="시설물정보">팝업닫기</button>
+        </div>
+    </section>
+
+    <section id="moveToCoord" class="modal" aria-hidden="true" style="display:block">
+        <div class="container" role="dialog" aria-labelledby="coord_title" aria-modal="true">
+            <header class="modal_header">
+                <h3 id="coord_title">좌표 이동</h3>
+            </header>
+            <div class="modal_body">
+                <div class="content">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt>좌표체계</dt>
+                                <dd><input type="text" name="" id="" class="tf_text" placeholder="GRS80"></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>경도</dt>
+                                <dd><input type="text" name="" id="" class="tf_text" placeholder="126.9519"></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>위도</dt>
+                                <dd><input type="text" name="" id="" class="tf_text" placeholder="37.5323"></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button role="button" class="btn_modal_close" onclick="app.modal('moveToCoord',false)" title="좌표 이동">팝업닫기</button>
+        </div>
+    </section>
+
+    <section id="search" class="modal" aria-hidden="true">
+        <div class="container" role="dialog" aria-labelledby="search_title" aria-modal="true">
+            <header class="modal_header">
+                <h3 id="search_title">통합 검색</h3>
+            </header>
+            <div class="modal_body">
+                <div class="content">
+                    
+                </div>
+            </div>
+            <button role="button" class="btn_modal_close" onclick="app.modal('search',false)" title="통합 검색">팝업닫기</button>
+        </div>
+    </section>
+
     <script>
         var app = {
             nav : function(){
@@ -456,6 +529,28 @@
                     return false;
                 });
             },
+            panel : function(){
+                $(".panel_control button").on("click" , function(e){
+                    
+                })
+            },
+
+            modal : function(el,type){
+                if(type === false){
+                    var id = el;
+                    $("#"+id).fadeOut().attr("aria-hidden" , "true")
+
+                } else if(type === true){
+                    var id = el.getAttribute("aria-controls");
+                    var left = ($(window).width() - $('#'+id).width()) / 2;
+                    var top = ($(window).height() - $('#'+id).height()) / 2;
+                    $("#"+id).fadeIn().css({"left" : left + "px" , "top" : top +"px"})
+                    .attr("aria-hidden" , "false")
+                }
+                left = null;
+                top = null;
+                id = null;
+            },
 
             mapDevision : function(){
             	$('#timeSeries').click(function(){
@@ -466,7 +561,6 @@
 			            $('.map_slider').mapslider().off().find('.s_left.image').css('width','100%');
 			            $('.s_handle, .s_right.image img').hide();
 			        }
-			        
 				});
             },
             init : function(){
@@ -475,6 +569,8 @@
             }
         }
         app.init();
+
+        
     </script>
     
 </body>
