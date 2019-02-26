@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-@function cp($target, $container) {
-  @return calc-percent($target, $container);
-}
-
-
 #skip{
 	position:relative;
 	z-index:102;
