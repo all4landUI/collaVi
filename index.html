@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="src/css/map.css">
     <link rel="stylesheet" type="text/css" href="src/css/pannel.css">
     <link rel="stylesheet" type="text/css" href="src/css/right_gnb.css">
-    <title>철도시설 종합정보시스템</title>
+    <title>HYUNDAI MnSOFT Collavi</title>
 	<script src="src/js/libs/jQuery/1.12.3/jquery.min.js"></script>
 	<script src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
     <script src="src/js/libs/mCustomScrollbar/3.1.5/jquery.mCustomScrollbar.min.js"></script>
@@ -303,11 +303,72 @@
 
         <aside id="map_control">
             <h3 class="blind">지도 컨트롤</h3>
-            <div>
+            <div id="map_properties">
+                <ul id="first_map_tool" class="com_map_tool">
+                    <li>
+                        <span>
+                            배경지도
+                        </span>
+                        <ul class="tool_depth02">
+                            <li>기본</li>
+                            <li>흑백</li>
+                            <li>다음</li>
+                            <li>네이버</li>
+                            <li>영상</li>
+                            <li>배경지도</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>로드뷰</span>
+                        <ul class="tool_depth02">
+                            <li>로드뷰</li>
+                            <li>거리뷰</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>부가정보</span>
+                        <ul class="tool_depth02">
+                            <li>CCTV</li>
+                            <li>교통</li>
+                            <li>유고</li>
+                            <li>부가정보</li>
+                            <li>EV충전소</li>
+                            <li>유가</li>
+                            <li>날씨</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>지도분할</span>
+                    </li>
+                </ul>
                 
+                <ul id="second_map_tool" class="com_map_tool">
+                    <li>
+                        <span>zoom_plus</span>
+                    </li>
+                    <li>
+                        <span>zoom_minus</span>
+                    </li>
+                    <li>
+                        <span>길이재기</span>
+                        <ul class="tool_depth02">
+                            <li>초기화</li>
+                            <li>반경측정</li>
+                            <li>면적재기</li>
+                            <li>길이재기</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>지도저장</span>
+                    </li>
+                    <li>
+                        <span>설정</span>
+                    </li>
+                </ul>
+
             </div>
 
-        </aside>
+        </aside>    
         <!-- #map_control -->
     </sectoin>
     <!-- .wrapper -->

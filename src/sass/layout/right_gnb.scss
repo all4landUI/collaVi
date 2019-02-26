@@ -1,1 +1,53 @@
 @charset "utf-8";
+
+/* right_gnb */
+
+/* map_control */
+
+#map_control{
+	z-index: 30;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+
+	#map_properties{
+		width: 46px;
+		
+		.com_map_tool{
+
+			li{
+				height: 46px;
+				background: #fff;
+				font-size: 9px;
+				text-align: center;
+				border: 1px solid #d3d3d3;
+				margin-top: -01px;
+
+			}
+
+			.tool_depth02{
+				display: none;
+
+				li{
+					float: left;
+					&:after{
+						content:'';
+						display: block;
+						clear: both;
+					}
+				}
+			}
+		}
+
+		#first_map_tool{
+			margin-bottom: 18px;
+		}
+
+		#second_map_tool{
+
+		}
+	}
+}
+/* map_control */
+
+/* right_gnb */
