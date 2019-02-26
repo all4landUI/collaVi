@@ -1,3 +1,35 @@
+@charset "UTF-8";
 .wrapper { position: absolute; z-index: 10; top: 0; bottom: 0; left: 70px; right: 0; }
 .wrapper #map { width: 100%; height: 100%; }
 .wrapper #map img { height: 100%; width: 100%; display: block; vertical-align: top; }
+
+/* 시계열 */
+.map_slider { width: 100%; height: 100%; padding: 0; position: relative; z-index: 1; }
+.map_slider .s_left.image { position: relative; z-index: 2; overflow: hidden; width: 100%; height: 100%; }
+.map_slider .s_right.image { position: absolute; z-index: 1; top: 0px; bottom: 0; left: 0px; }
+
+.s_handle { display: none; position: absolute; z-index: 2; top: 0px; left: 0px; bottom: 0px; }
+.s_handle:after { content: ''; position: absolute; z-index: 2; top: 0px; right: -35px; width: 70px; height: 100%; border: 0; background: url(../../images/btn/btn_handle.png) no-repeat center; box-shadow: none; cursor: pointer; }
+
+.foot_wrap { position: absolute; bottom: 20px; right: 20px; z-index: 20; overflow: hidden; }
+.foot_wrap .coord_control, .foot_wrap .hmap_info, .foot_wrap .hmap_scale { float: left; color: #222; font-size: 12px; }
+.foot_wrap .coord_control, .foot_wrap .hmap_info { background-color: rgba(255, 255, 255, 0.85); height: 35px; line-height: 34px; border: 1px solid #b8b8b8; border-top: 0; border-radius: 15px; padding: 0 24px; }
+.foot_wrap .coord_control { position: relative; padding-right: 70px; }
+.foot_wrap .coord_control .btn_coord { position: absolute; display: block; background-color: #98a9ba; top: 4px; right: 4px; height: 27px; width: 53px; border: 1px solid #d5d5d5; border-radius: 15px; text-align: center; color: #fff; }
+.foot_wrap span.slash { display: inline-block; margin: 0 8px; }
+.foot_wrap .hmap_info { margin: 0 3px; }
+.foot_wrap .hmap_scale { width: 52px; height: 34px; font-weight: 700; text-align: center; padding-top: 12px; background: url(../../images/bg_scale.png) 0 20px no-repeat; }
+
+.modal { display: none; position: absolute; left: 0; top: 0; z-index: 100000; border: 1px solid #2a3a4a; }
+.modal .container { position: relative; }
+.modal .modal_header { background-color: #2a3a4a; padding: 0 20px; position: relative; z-index: 9; }
+.modal .modal_header h3 { color: #fff; height: 40px; line-height: 40px; }
+.modal .modal_body { background-color: #fff; padding: 20px; }
+.modal .modal_body .content { overflow-y: auto; }
+.modal .btn_modal_close { position: absolute; top: 13px; right: 13px; width: 20px; height: 20px; z-index: 10; font-size: 0; text-indent: -9999em; display: block; background: url(../../images/btn_popup_close.png) 50% 50% no-repeat; }
+
+#moveToCoord ul { padding-bottom: 15px; }
+#moveToCoord ul li + li { margin-top: 6px; }
+#moveToCoord ul li dl dd, #moveToCoord ul li dl dt { float: left; }
+#moveToCoord ul li dl dt { background: url(../../images/blit_condition_list.gif) no-repeat 0 50%; padding-left: 12px; width: 85px; color: #666; font-size: 13px; height: 29px; line-height: 29px; }
+#moveToCoord ul li dl dd input { height: 29px; }
