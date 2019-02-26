@@ -51,9 +51,9 @@
 	};
 
 	$.fn.mapslider.defaultOptions= {
-			initialPosition: 0.5,
-			showInstruction: true,
-			instructionText: 'Click and Drag'
+		initialPosition: 0.5,
+		showInstruction: true,
+		instructionText: 'Click and Drag'
 	};
 
 }(jQuery));

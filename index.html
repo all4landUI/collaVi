@@ -316,7 +316,16 @@
 
     <sectoin class="wrapper">
         <div id="map">
-            <img src="./images/dummy.jpg" alt="dummy" style="height:100%">
+            <div class="map_slider">
+				<div class="s_left image">
+                    <img src="images/thumb/img_map_main.jpg" alt="map">
+				</div>
+				<div class="s_right image">
+                    <img src="images/thumb/img_map_air.jpg" alt="map">
+				</div>
+                <div class="s_handle"></div>
+			</div>
+
         </div>
 
         <aside id="map_control">
@@ -332,29 +341,47 @@
         var app = {
             nav : function(){
                 var $nav = $(".navlist li");
-
                 $nav.on("click" , "a" , function(e){
-                   
                    var $value = $(this).attr("class");
-
                    switch ($value) {
                    	case "hmn_sch":
-                   		// statements_1
+                   		console.log("검색");
                    		break;
                    	case "hmn_route":
-                   		// statements_1
+                   		console.log("경로");
                    		break;
                    	case "hmn_layer":
-                   		// statements_1
+                   		console.log("레이어");
                    		break;
                    	case "hmn_file":
-                   		// statements_1
+                   		console.log("파일");
                    		break;
-                   	case "hmn_file":
-                   		// statements_1
+                   	case "hmn_issue":
+                   		console.log("이슈");
+                   		break;
+                   	case "hmn_memo":
+                   		console.log("메모");
+                   		break;
+                   	case "hmn_fav":
+                   		console.log("즐찾");
+                   		break;
+                   	case "hmn_loc":
+                   		console.log("주행궤적");
+                   		break;
+                   	case "hmn_rad":
+                   		console.log("rad");
+                   		break;
+                   	case "hmn_adm":
+                   		console.log("관리자");
+                   		break;
+                   	case "hmn_mod":
+                   		console.log("지도수정");
+                   		break;
+                   	case "hmn_sports":
+                   		console.log("스포츠정보");
                    		break;
                    	default:
-                   		// statements_def
+                   		console.log("없음");
                    		break;
                    }
 
@@ -362,8 +389,21 @@
                 });
             },
 
+            mapDevision : function(){
+            	$('#timeSeries').click(function(){
+			        if($('.map_slider .s_handle').css('display') == 'none'){
+			            $('.map_slider').mapslider().on();
+			            $('.s_handle, .s_right.image img').show();
+			        } else{
+			            $('.map_slider').mapslider().off().find('.s_left.image').css('width','100%');
+			            $('.s_handle, .s_right.image img').hide();
+			        }
+			        
+				});
+            },
             init : function(){
                 this.nav();
+                this.mapDevision();
             }
         }
         app.init();
