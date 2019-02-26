@@ -1,12 +1,114 @@
 @charset "utf-8";
 
-/** GNB **/
-#gnb{
+@function cp($target, $container) {
+  @return calc-percent($target, $container);
+}
+
+
+#skip{
+	position:relative;
+	z-index:102;
+	a{
+		position: absolute;
+	    left: 0;
+	    top: -30px;
+	    width: 108px;
+	    border: 1px solid #eaeaea;
+	    text-align: center;
+	    outline: none;
+	    background-color:#000;
+	    &:focus,
+	    &:active{
+	    	top: 0;
+		    text-decoration: none;
+		    cursor: pointer;
+		    zoom: 1;
+	    }
+	    span{
+    		display: inline-block;
+		    padding: 2px 6px 0 0;
+		    font-size: 11px;
+		    letter-spacing: -1px;
+		    color: #fff;
+		    line-height: 26px;
+	    }
+	}
+}
+
+/** aside **/
+#aside{
 	position:fixed;
 	left:0;
 	top:0;
 	height:100%;
 	width:70px;
 	background-color:#fff;
-	z-index:10;
+	z-index:12;
+}
+#nav{
+	.navlist{
+		li{
+			a{
+				display:block;
+				position:relative;
+				text-align:center;
+				padding-top:46px;
+				padding-bottom:18px;
+				width:70px;
+				font-size:12px;
+				&.hmn_mod,
+				&.hnm_sports{
+					width:calc(100% - 8px);
+					margin-left:4px;
+					background-color:#98a9ba;
+					color:#fff;
+					border-radius:5px;
+					height:70px;
+					padding-top:40px;
+				}
+				&.hnm_sports{
+					margin-top:4px;
+				}
+				&:after{
+					content:"";
+					display:block;
+					position:absolute;
+					background-image:url(../../images/sprite_nav.png);
+					background-repeat:no-repeat;
+					width:20px;
+					height:20px;
+					top:18px;
+					left:50%;
+					margin-left:-10px;
+				}
+				
+				@each $obj in (hmn_sch:0, hmn_route:1, hmn_layer:2, hmn_file:3 , hmn_issue:4 , hmn_memo:5 ,hmn_fav:6 , hmn_loc:7 , hmn_rad:8 , hmn_adm:9 , hmn_mod:10 , hnm_sports:11) {
+					&.#{nth($obj,1)}{
+						@if nth($obj,1) == "hmn_sch"{
+							&.active{
+								background-color:#0277bd;
+								color:#fff;
+								&:after{
+									background-position:-25px -#{nth($obj,2)*25}px;	
+								}
+							}
+						}
+						@if nth($obj,1) == "hmn_layer"{
+							&:hover{
+								background-color:#f0f0f0;
+							}
+						}
+					  	&:after{
+					  		@if nth($obj,1) == "hmn_loc"{
+					  			width:25px;
+					  			margin-left:-12.5px;
+					  		}
+					  		background-position:0 -#{nth($obj,2)*25}px;
+					  	}
+				  	}
+				}
+
+			}
+		}
+	}
 }

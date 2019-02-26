@@ -14,7 +14,11 @@
     <link rel="stylesheet" type="text/css" href="src/css/map.css">
     <link rel="stylesheet" type="text/css" href="src/css/pannel.css">
     <link rel="stylesheet" type="text/css" href="src/css/right_gnb.css">
+<<<<<<< HEAD
     <title>HYUNDAI MnSOFT Collavi</title>
+=======
+    <title>현대앰엔소프트_CollaVI</title>
+>>>>>>> 87cb805264bc8d29e703dc0bc4310a147acbc684
 	<script src="src/js/libs/jQuery/1.12.3/jquery.min.js"></script>
 	<script src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
     <script src="src/js/libs/mCustomScrollbar/3.1.5/jquery.mCustomScrollbar.min.js"></script>
@@ -25,14 +29,32 @@
 		<script src="src/js/libs/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="panel">
+<body>
+    <div id="skip">
+        <a href="#nav"><span>본문으로 바로가기</span></a>
+    </div>
+    <aside id="aside">
+        <nav id="nav">
+            <h3 class="blind">본문메뉴</h3>
+            <ul class="navlist">
+                <li><a href="#" role="button" class="hmn_sch">검색</a></li>
+                <li><a href="#" role="button" class="hmn_route">경로</a></li>
+                <li><a href="#" role="button" class="hmn_layer">레이어</a></li>
+                <li><a href="#" role="button" class="hmn_file">파일</a></li>
+                <li><a href="#" role="button" class="hmn_issue">이슈</a></li>
+                <li><a href="#" role="button" class="hmn_memo">메모</a></li>
+                <li><a href="#" role="button" class="hmn_fav">즐겨찾기</a></li>
+                <li><a href="#" role="button" class="hmn_loc">주행궤적</a></li>
+                <li><a href="#" role="button" class="hmn_rad">RAD</a></li>
+                <li><a href="#" role="button" class="hmn_adm">관리자</a></li>
+                <li><a href="#" role="button" class="hmn_mod">지도수정</a></li>
+                <li><a href="#" role="button" class="hnm_sports">스포츠정보</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- #aside -->
 
-    <header id="nav">
-        <h3 class="blind">본문메뉴</h3>
-    </header>
-    <!-- #gnb -->
-
-    <section id="search_panel" class="panel"><!-- .panel 일 때 search_panel 활성화 -->
+    <section id="search_panel"><!-- .panel 일 때 search_panel 활성화 -->
         <div class="search_wrapper">
             <header class="search_header">
                 <h1 class="logo"><img src="./images/logo.png" alt="hyundai mnsoft collavi"></h1>
@@ -303,6 +325,7 @@
 
         <aside id="map_control">
             <h3 class="blind">지도 컨트롤</h3>
+<<<<<<< HEAD
             <div id="map_properties">
                 <ul id="first_map_tool" class="com_map_tool">
                     <li>
@@ -369,9 +392,55 @@
             </div>
 
         </aside>    
+=======
+            
+        </aside>
+>>>>>>> 87cb805264bc8d29e703dc0bc4310a147acbc684
         <!-- #map_control -->
     </sectoin>
     <!-- .wrapper -->
+	
+	
+    <script>
+        var app = {
+            nav : function(){
+                var $nav = $(".navlist li");
+
+                $nav.on("click" , "a" , function(e){
+                   
+                   var $value = $(this).attr("class");
+
+                   switch ($value) {
+                   	case "hmn_sch":
+                   		// statements_1
+                   		break;
+                   	case "hmn_route":
+                   		// statements_1
+                   		break;
+                   	case "hmn_layer":
+                   		// statements_1
+                   		break;
+                   	case "hmn_file":
+                   		// statements_1
+                   		break;
+                   	case "hmn_file":
+                   		// statements_1
+                   		break;
+                   	default:
+                   		// statements_def
+                   		break;
+                   }
+
+                    return false;
+                });
+            },
+
+            init : function(){
+                this.nav();
+            }
+        }
+        app.init();
+    </script>
     
 </body>
 </html>

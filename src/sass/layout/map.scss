@@ -1,8 +1,13 @@
 @charset "utf-8";
 
 .wrapper{
+<<<<<<< HEAD
 	position: relative;
 	display: block;
+=======
+	position:relative;
+	z-index:10;
+>>>>>>> 87cb805264bc8d29e703dc0bc4310a147acbc684
 	height:100%;
 	width:100%;
 	#map{

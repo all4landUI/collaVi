@@ -238,7 +238,9 @@ body{
 		}
 	}
 	.condition_cont{
-		ul.input_wrap{
+		
+	}
+	ul.input_wrap{
 			padding-bottom:15px;
 			li{
 				&+li{
@@ -307,7 +309,6 @@ body{
 				background-color:#cacaca;
 			}
 		}
-	}
 }
 
 .search_list{
