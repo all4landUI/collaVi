@@ -18,9 +18,5 @@
 #login_wrap #login_form #btn_wrap button { display: block; width: 100%; padding: 25px 0; background: #0277bd; border-radius: 5px; color: #fff; font-size: 16px; line-height: 1; }
 
 /* login wrap */
-/* map_control */
-#map_control { z-index: 30; position: absolute; right: 0; top: 0; }
-
-/* map_control */
 
 /*# sourceMappingURL=login.css.map */
