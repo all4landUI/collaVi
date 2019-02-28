@@ -335,30 +335,31 @@
             <div id="map_properties">
                 <ul id="first_map_tool" class="com_map_tool">
                     <li class="bg_mapico">
-                        <a href="#">배경지도</a>
+                        <a href="#" class="tool_depth01">배경지도</a>
                         <ul class="tool_depth02">
                             <li><a href="#">기본</a></li>
                             <li><a href="#">흑백</a></li>
                             <li><a href="#">다음</a></li>
                             <li><a href="#">네이버</a></li>
                             <li><a href="#">영상</a></li>
-                            <li><a href="#">배경지도</a></li>
+                            <li class="sub_close"><a href="#">배경지도</a></li>
                         </ul>
                     </li>
                     <li class="load_mapico">
-                        <a href="#">로드뷰</a>
+                        <a href="#" class="tool_depth01">로드뷰</a>
                         <ul class="tool_depth02">
                             <li><a href="#">로드뷰</a></li>
                             <li><a href="#">거리뷰</a></li>
+                            <li class="sub_close"><a href="#">로드뷰</a></li>
                         </ul>
                     </li>
                     <li class="additional_mapico">
-                        <a href="#">부가정보</a>
+                        <a href="#" class="tool_depth01">부가정보</a>
                         <ul class="tool_depth02">
                             <li><a href="#">CCTV</a></li>
                             <li><a href="#">교통</a></li>
                             <li><a href="#">유고</a></li>
-                            <li><a href="#">부가정보</a></li>
+                            <li class="sub_close"><a href="#">부가정보</a></li>
                             <li><a href="#">EV충전소</a></li>
                             <li><a href="#">유가</a></li>
                             <li><a href="#">날씨</a></li>
@@ -377,12 +378,12 @@
                         <a href="#">zoom_minus</a>
                     </li>
                     <li class="length_mapico">
-                        <a href="#">길이재기</a>
+                        <a href="#" class="tool_depth01">길이재기</a>
                         <ul class="tool_depth02">
                             <li><a href="#">초기화</a></li>
                             <li><a href="#">반경측정</a></li>
                             <li><a href="#">면적재기</a></li>
-                            <li><a href="#">길이재기</a></li>
+                            <li class="sub_close"><a href="#">길이재기</a></li>
                         </ul>
                     </li>
                     <li class="save_mapico">
@@ -772,8 +773,27 @@
                 this.clickEvent();
             }
         }
-        app.init();       
+        app.init();
+    
     </script>
+
+    
     
 </body>
+
+<script>
+    
+    $(document).ready(function(){
+        $(".com_map_tool>li a").click(function(){
+            var submenu = $(this).next("ul");
+            var sub_close = $(this).next("ul .sub_close");
+
+            if( submenu.is(":visible") ){
+                submenu.hide();
+            }else{
+                submenu.show();
+            };
+        });
+    });
+</script>
 </html>
