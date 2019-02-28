@@ -8,6 +8,7 @@ body { letter-spacing: -0.05em; }
 
 .panel_control { position: absolute; bottom: 0; left: 0; right: 0; height: 20px; text-align: center; width: 100%; }
 .panel_control button { display: inline-block; width: 56px; height: 20px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/btn_panel_control.png); font-size: 0; text-indent: -9999em; }
+.panel_control button.btn__panel--close { background-position: 0 -20px; }
 
 .search_header { padding: 20px 20px 0; height: 85px; }
 .search_header .logo { float: left; }
@@ -43,7 +44,8 @@ body { letter-spacing: -0.05em; }
 .search_wrap .search_form .select { float: left; width: 80px; }
 .search_wrap .condition_search { margin: 20px 0; }
 .search_wrap .condition_search .search_title .condition__btn--control { position: absolute; right: 0; top: 4px; width: 15px; height: 15px; background: url(../../images/btn_condition.gif) no-repeat 0 0; font-size: 0; text-indent: -9999em; display: block; }
-.search_wrap .condition_search .search_title .condition__btn--control.--close { background-position: 0 -15px; }
+.search_wrap .condition_search .search_title .condition__btn--control.active { background-position: 0 -15px; }
+.search_wrap .condition_cont { display: none; }
 .search_wrap ul.input_wrap { padding-bottom: 15px; }
 .search_wrap ul.input_wrap li + li { margin-top: 6px; }
 .search_wrap ul.input_wrap li dl:after { content: ""; display: block; overflow: hidden; clear: both; }
@@ -52,8 +54,8 @@ body { letter-spacing: -0.05em; }
 .search_wrap ul.input_wrap li dl dd input { height: 29px; }
 .search_wrap .condition_tag { text-align: center; padding: 15px 0; border-top: 1px solid #eaeaea; }
 .search_wrap .condition_tag .btn__group--tag { display: inline-block; }
-.search_wrap .condition_tag .btn__group--tag button { display: block; float: left; height: 30px; padding-left: 12px; padding-right: 12px; }
-.search_wrap .condition_tag .btn__group--tag button:focus, .search_wrap .condition_tag .btn__group--tag button.active { background-color: #2f5691; }
+.search_wrap .condition_tag .btn__group--tag button { background-color: #cacaca; color: #fff; display: block; float: left; height: 30px; padding-left: 12px; padding-right: 12px; }
+.search_wrap .condition_tag .btn__group--tag button.active { background-color: #2f5691; }
 .search_wrap .condition_tag .btn__group--tag button + button { margin-left: 5px; }
 .search_wrap .condition__btn--form { text-align: center; padding: 10px 0 0; }
 .search_wrap .condition__btn--form button { font-size: 13px; color: #fff; height: 35px; width: 87px; }
@@ -65,8 +67,8 @@ body { letter-spacing: -0.05em; }
 .search_list .wrap_cont .addr_view span.addr_1 { color: #666; font-size: 13px; }
 .search_list .wrap_cont .addr_view span.addr_1 i { display: inline-block; position: absolute; left: 0; top: 0; width: 16px; height: 16px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/bg_addr1.png); font-size: 0; text-indent: -9999em; font-style: normal; font-weight: bold; text-indent: 0; font-size: 10px; color: #666; text-align: center; line-height: 16px; }
 .search_list .wrap_cont .addr_view span.addr_2 { color: #999; font-size: 13px; margin-top: 5px; }
-.search_list .wrap_cont .addr_view span.addr_2.active:after { background-position: 0 -16px; }
-.search_list .wrap_cont .addr_view span.addr_2:after { content: ""; display: inline-block; position: absolute; left: 0; top: 0; width: 16px; height: 16px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/bg_addr2.png); font-size: 0; text-indent: -9999em; }
+.search_list .wrap_cont .addr_view span.addr_2.active button { background-position: 0 -16px; }
+.search_list .wrap_cont .addr_view span.addr_2 button { content: ""; display: inline-block; position: absolute; left: 0; top: 0; width: 16px; height: 16px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/bg_addr2.png); font-size: 0; text-indent: -9999em; }
 .search_list .wrap_cont .btn_wrap { margin-top: 10px; padding-left: 25px; }
 .search_list .wrap_cont .btn_wrap:after { content: ""; display: block; overflow: hidden; clear: both; }
 .search_list .wrap_cont .btn_wrap .btn_double { float: left; display: block; width: 100px; border: 1px solid #ddd; border-radius: 15px; overflow: hidden; margin-right: 5px; }

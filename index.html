@@ -59,7 +59,7 @@
                     <!-- 로그아웃일때 
                     <button class="btn__login" role="button">로그인</a>
                     -->
-                    <a href="#" class="btn__logout" role="button" onclick="app.modal(this,true)" aria-controls="facility"><i></i>로그아웃</a>
+                    <a href="#" class="btn__logout" role="button"><i></i>로그아웃</a>
                 </div>
             </header>
             <!-- .search_header -->
@@ -78,7 +78,7 @@
 
                 <article class="search_wrap">
                     <div role="tabpanel" id="search_type--1" aria-labelledby="search_type--1"></div>
-                    <!-- #search_type--1 -->
+           
 
                     <div role="tabpanel" id="search_type--2" aria-labelledby="search_type--2" class="active">
 
@@ -119,25 +119,25 @@
                                     </li>
                                     <li>
                                         <dl>
-                                            <dt>제품</dt>
+                                            <dt>정업차수</dt>
                                             <dd><input type="text" name="" id="" class="tf_text" placeholder="20180301-00"></dd>
                                         </dl>
                                     </li>
                                     <li>
                                         <dl>
-                                            <dt>제품</dt>
+                                            <dt>대분류</dt>
                                             <dd><input type="text" name="" id="" class="tf_text" placeholder="전체"></dd>
                                         </dl>
                                     </li>
                                     <li>
                                         <dl>
-                                            <dt>제품</dt>
+                                            <dt>중분류</dt>
                                             <dd><input type="text" name="" id="" class="tf_text" placeholder="전체"></dd>
                                         </dl>
                                     </li>
                                     <li>
                                         <dl>
-                                            <dt>제품</dt>
+                                            <dt>소분류</dt>
                                             <dd><input type="text" name="" id="" class="tf_text" placeholder="전체"></dd>
                                         </dl>
                                     </li>
@@ -145,10 +145,10 @@
 
                                 <div class="condition_tag">
                                     <div class="btn__group--tag">
-                                        <button role="button" class="btn btn_gray round">지점</button>
-                                        <button role="button" class="btn btn_gray round active">영역</button>
-                                        <button role="button" class="btn btn_gray round active">현재영역</button>
-                                        <button role="button" class="btn btn_gray round">시설물선택</button>
+                                        <button role="button" class="btn round">지점</button>
+                                        <button role="button" class="btn round active">영역</button>
+                                        <button role="button" class="btn round">현재영역</button>
+                                        <button role="button" class="btn round">시설물선택</button>
                                     </div>
                                 </div>
 
@@ -175,7 +175,77 @@
                                 <li class="wrap_cont">
                                     <div class="addr_view">
                                         <span class="addr_1"><i>A</i>염포산/요금소(현대자동차/울산/공장방면)</span>
-                                        <span class="addr_2 active">울산광역시 동구 방어동 13-7</span>
+                                        <span class="addr_2"><button role="button">즐겨찾기</button>울산광역시 동구 방어동 13-7</span>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <span class="btn_double">
+                                            <button role="button" class="btn_go">출발</button>
+                                            <button role="button" class="btn_arrive">도착</button>
+                                        </span>
+                                        <span class="tag_name">하위POI</span>
+                                    </div>
+                                </li>
+
+                                <li class="wrap_cont">
+                                    <div class="addr_view">
+                                        <span class="addr_1"><i>B</i>염포산/요금소(현대자동차/울산/공장방면)</span>
+                                        <span class="addr_2 active"><button role="button">즐겨찾기</button>울산광역시 동구 방어동 13-7</span>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <span class="btn_double">
+                                            <button role="button" class="btn_go">출발</button>
+                                            <button role="button" class="btn_arrive">도착</button>
+                                        </span>
+                                        <span class="tag_name">하위POI</span>
+                                    </div>
+                                </li>
+
+                                <li class="wrap_cont">
+                                    <div class="addr_view">
+                                        <span class="addr_1"><i>C</i>염포산/요금소(현대자동차/울산/공장방면)</span>
+                                        <span class="addr_2 active"><button role="button">즐겨찾기</button>울산광역시 동구 방어동 13-7</span>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <span class="btn_double">
+                                            <button role="button" class="btn_go">출발</button>
+                                            <button role="button" class="btn_arrive">도착</button>
+                                        </span>
+                                        <span class="tag_name">하위POI</span>
+                                    </div>
+                                </li>
+
+                                <li class="wrap_cont">
+                                    <div class="addr_view">
+                                        <span class="addr_1"><i>D</i>염포산/요금소(현대자동차/울산/공장방면)</span>
+                                        <span class="addr_2 active"><button role="button">즐겨찾기</button>울산광역시 동구 방어동 13-7</span>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <span class="btn_double">
+                                            <button role="button" class="btn_go">출발</button>
+                                            <button role="button" class="btn_arrive">도착</button>
+                                        </span>
+                                        <span class="tag_name">하위POI</span>
+                                    </div>
+                                </li>
+
+                                <li class="wrap_cont">
+                                    <div class="addr_view">
+                                        <span class="addr_1"><i>E</i>염포산/요금소(현대자동차/울산/공장방면)</span>
+                                        <span class="addr_2 active"><button role="button">즐겨찾기</button>울산광역시 동구 방어동 13-7</span>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <span class="btn_double">
+                                            <button role="button" class="btn_go">출발</button>
+                                            <button role="button" class="btn_arrive">도착</button>
+                                        </span>
+                                        <span class="tag_name">하위POI</span>
+                                    </div>
+                                </li>
+
+                                <li class="wrap_cont">
+                                    <div class="addr_view">
+                                        <span class="addr_1"><i>E</i>염포산/요금소(현대자동차/울산/공장방면)</span>
+                                        <span class="addr_2 active"><button role="button">즐겨찾기</button>울산광역시 동구 방어동 13-7</span>
                                     </div>
                                     <div class="btn_wrap">
                                         <span class="btn_double">
@@ -189,77 +259,7 @@
                                 <li class="wrap_cont">
                                     <div class="addr_view">
                                         <span class="addr_1"><i>A</i>염포산/요금소(현대자동차/울산/공장방면)</span>
-                                        <span class="addr_2 active">울산광역시 동구 방어동 13-7</span>
-                                    </div>
-                                    <div class="btn_wrap">
-                                        <span class="btn_double">
-                                            <button role="button" class="btn_go">출발</button>
-                                            <button role="button" class="btn_arrive">도착</button>
-                                        </span>
-                                        <span class="tag_name">하위POI</span>
-                                    </div>
-                                </li>
-
-                                <li class="wrap_cont">
-                                    <div class="addr_view">
-                                        <span class="addr_1"><i>A</i>염포산/요금소(현대자동차/울산/공장방면)</span>
-                                        <span class="addr_2 active">울산광역시 동구 방어동 13-7</span>
-                                    </div>
-                                    <div class="btn_wrap">
-                                        <span class="btn_double">
-                                            <button role="button" class="btn_go">출발</button>
-                                            <button role="button" class="btn_arrive">도착</button>
-                                        </span>
-                                        <span class="tag_name">하위POI</span>
-                                    </div>
-                                </li>
-
-                                <li class="wrap_cont">
-                                    <div class="addr_view">
-                                        <span class="addr_1"><i>A</i>염포산/요금소(현대자동차/울산/공장방면)</span>
-                                        <span class="addr_2 active">울산광역시 동구 방어동 13-7</span>
-                                    </div>
-                                    <div class="btn_wrap">
-                                        <span class="btn_double">
-                                            <button role="button" class="btn_go">출발</button>
-                                            <button role="button" class="btn_arrive">도착</button>
-                                        </span>
-                                        <span class="tag_name">하위POI</span>
-                                    </div>
-                                </li>
-
-                                <li class="wrap_cont">
-                                    <div class="addr_view">
-                                        <span class="addr_1"><i>A</i>염포산/요금소(현대자동차/울산/공장방면)</span>
-                                        <span class="addr_2 active">울산광역시 동구 방어동 13-7</span>
-                                    </div>
-                                    <div class="btn_wrap">
-                                        <span class="btn_double">
-                                            <button role="button" class="btn_go">출발</button>
-                                            <button role="button" class="btn_arrive">도착</button>
-                                        </span>
-                                        <span class="tag_name">하위POI</span>
-                                    </div>
-                                </li>
-
-                                <li class="wrap_cont">
-                                    <div class="addr_view">
-                                        <span class="addr_1"><i>A</i>염포산/요금소(현대자동차/울산/공장방면)</span>
-                                        <span class="addr_2 active">울산광역시 동구 방어동 13-7</span>
-                                    </div>
-                                    <div class="btn_wrap">
-                                        <span class="btn_double">
-                                            <button role="button" class="btn_go">출발</button>
-                                            <button role="button" class="btn_arrive">도착</button>
-                                        </span>
-                                        <span class="tag_name">하위POI</span>
-                                    </div>
-                                </li>
-
-                                <li class="wrap_cont">
-                                    <div class="addr_view">
-                                        <span class="addr_1"><i>A</i>염포산/요금소(현대자동차/울산/공장방면)</span>
-                                        <span class="addr_2 active">울산광역시 동구 방어동 13-7</span>
+                                        <span class="addr_2 active"><button role="button">즐겨찾기</button>울산광역시 동구 방어동 13-7</span>
                                     </div>
                                     <div class="btn_wrap">
                                         <span class="btn_double">
@@ -272,14 +272,16 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- #search_type--2 -->
+                    
 
                     <div role="tabpanel" id="search_type--3" aria-labelledby="search_type--3">
                         
                     </div>
+
                     <div role="tabpanel" id="search_type--4" aria-labelledby="search_type--4">
                         
                     </div>
+
                     <div role="tabpanel" id="search_type--5" aria-labelledby="search_type--5">
                         
                     </div>
@@ -400,7 +402,7 @@
         <article class="foot_wrap">
            <div class="coord_control" title="X,Y좌표">
                X : 127.XXXX<span class="slash" aria-hidden="true">/</span>Y : 38.XXXX
-               <button role="button" title="좌표로이동" class="btn_coord">이동</button>
+               <button role="button" onclick="app.modal(this,true)" aria-controls="facility" class="btn_coord">이동</button>
            </div> 
            <div class="hmap_info">
                물리LV: 07<span class="slash" aria-hidden="true">/</span>논리LV: 17<span class="slash" aria-hidden="true">/</span>도엽번호:37000000
@@ -422,14 +424,181 @@
             </header>
             <div class="modal_body">
                 <div class="content">
-                    
+                    <div class="attr_menu">
+                    	<ul class="menu_list">
+                    		<li class="menu_level_1"><button role="button" class="menu_title">도로명주소도로구간</button>
+                    			<ul>
+                    				<li><a href="#">3261</a></li>
+                    				<li><a href="#">3266</a></li>
+                    			</ul>
+                    		</li>
+                    		<li class="menu_level_1"><button role="button" class="menu_title">연속지적</button>
+                    			<ul>
+                    				<li><a href="#">3261</a></li>
+                    				<li><a href="#">3266</a></li>
+                    			</ul>
+                    		</li>
+                    		<li class="menu_level_1 active"><button role="button" class="menu_title">차도면</button>
+                    			<ul>
+                    				<li><a href="#">3261</a></li>
+                    				<li><a href="#">3266</a></li>
+                    			</ul>
+                    		</li>
+                    	</ul>
+                    </div>
+
+                    <div class="menu_v">
+                    	<ul>
+                    		<li class="menu_head"><strong>항목명</strong></li>
+                    		<li class="menu_head"><strong>내용</strong></li>
+                    		<!-- loop -->
+							<li>도로구간일련번호</li>
+							<li>844</li>
+
+							<li>시도코드</li>
+							<li>42150</li>
+
+							<li>로명</li>
+							<li>율곡로</li>
+
+							<li>영문도로명</li>
+							<li>Yulgok-ro</li>
+
+							<li>기점</li>
+							<li>낙풍리708-9도</li>
+
+							<li>종점</li>
+							<li>죽헌동산26-1도</li>
+
+							<li>도로명심의일자</li>
+							<li>20090923</li>
+
+							<li>도로제정권자</li>
+							<li>시군구</li>
+
+							<li>도로폭</li>
+							<li>24</li>
+
+							<li>도로길이</li>
+							<li>32,164</li>
+
+							<li>도로위예기능구분</li>
+							<li>3</li>
+
+							<li>고시일자</li>
+							<li>20091001</li>
+
+							<li>광역도로구분코드</li>
+							<li>3</li>
+
+							<li>도로구간종속구분</li>
+							<li>3</li>
+
+							<li>기초간격</li>
+							<li>20</li>
+
+							<li>이동사유코드</li>
+							<li>90</li>
+
+							<li>이동사유코드</li>
+							<li>90</li>
+
+							<li>이동사유코드</li>
+							<li>90</li>
+                    		<!-- loop -->
+                    	</ul>
+                    </div>
+
                 </div>
             </div>
             <button role="button" class="btn_modal_close" onclick="app.modal('facility',false)" title="시설물정보">팝업닫기</button>
         </div>
     </section>
+    <!-- #facility -->
 
-    <section id="moveToCoord" class="modal" aria-hidden="true" style="display:block">
+    <section id="search" class="modal" aria-hidden="true">
+        <div class="container" role="dialog" aria-labelledby="search_title" aria-modal="true">
+            <header class="modal_header">
+                <h3 id="search_title">통합 검색</h3>
+            </header>
+            <div class="modal_body">
+                <div class="content">
+                    
+                    <div class="search_cont">
+                    	<div class="box">
+                    		<h4>조건검색대상</h4>
+                    		<div class="list">
+                    			<ul>
+                    				<li><a href="#">가로등</a></li>
+                    				<li><a href="#">가로등제어기</a></li>
+                    				<li><a href="#">가로수</a></li>
+                    				<li><a href="#">고가도로</a></li>
+                    				<li><a href="#">공동구</a></li>
+                    				<li><a href="#">과속방지턱</a></li>
+                    				<li><a href="#">교량</a></li>
+                    				<li><a href="#">교량</a></li>
+                    			</ul>
+                    		</div>
+                    	</div>
+
+                    	<div class="box">
+                    		<h4>조건대상 항목</h4>
+                    		<div class="list">
+                    			<ul>
+                    				<li><a href="#">지형지물부호</a></li>
+                    				<li><a href="#">식재일자</a></li>
+                    				<li><a href="#">법정읍/면/동</a></li>
+                    				<li><a href="#">수종구분</a></li>
+                    				<li><a href="#">도엽번호</a></li>
+                    				<li><a href="#">가로수직경</a></li>
+                    				<li><a href="#">수목보호판유무</a></li>
+                    				<li><a href="#">수목보호판유무</a></li>
+                    			</ul>
+                    		</div>
+                    	</div>
+
+                    	<div class="box">
+                    		<h4>조건 설정</h4>
+                    		<div class="options">
+                    			<label for="algorithm">비교연산</label>
+                    			<select name="" id="algorithm">
+                    				<option value="">일치</option>
+                    			</select>
+                    		</div>
+                    		<div class="list height-2">
+                    			<ul>
+                    				<li><a href="#">가로수</a></li>
+                    			</ul>
+                    		</div>
+                    		<div class="list_control"><button role="button" class="btn">저장</button></div>
+                    	</div>
+
+                    	<div class="box">
+                    		<h4>검색 조건 항목</h4>
+                    		<div class="list height-3">
+                    			<strong class="list_title">조건</strong>
+                    			<ul>
+                    				<li><a href="#">지형지물부호 = 가로수</a></li>
+                    			</ul>
+                    		</div>
+                    		<div class="list_control"><button role="button" class="btn">삭제</button></div>
+                    	</div>                    	                    	
+                    </div>
+
+                    <div class="btn_wrap">
+                    	<button type="submit" role="button" class="btn btn_submit">검색</button>
+                    	<button role="button" class="btn btn_cancel" onclick="app.modal('search',false)">취소</button>
+                    </div>
+
+                </div>
+            </div>
+            <button role="button" class="btn_modal_close" onclick="app.modal('search',false)" title="통합 검색">팝업닫기</button>
+        </div>
+    </section>
+    <!-- #search -->
+
+
+    <section id="moveToCoord" class="modal" aria-hidden="true">
         <div class="container" role="dialog" aria-labelledby="coord_title" aria-modal="true">
             <header class="modal_header">
                 <h3 id="coord_title">좌표 이동</h3>
@@ -440,7 +609,7 @@
                         <li>
                             <dl>
                                 <dt>좌표체계</dt>
-                                <dd><input type="text" name="" id="" class="tf_text" placeholder="GRS80"></dd>
+                                <dd><input type="text" name="" id="" class="tf_text" disabled placeholder="GRS80"></dd>
                             </dl>
                         </li>
                         <li>
@@ -456,35 +625,64 @@
                             </dl>
                         </li>
                     </ul>
+
+                    <div class="btn_wrap">
+                    	<button role="button" class="btn" onclick="alert('이동'); return false;">이동</button>
+                    </div>
+
                 </div>
             </div>
             <button role="button" class="btn_modal_close" onclick="app.modal('moveToCoord',false)" title="좌표 이동">팝업닫기</button>
         </div>
     </section>
+    <!-- #moveToCoord -->
 
-    <section id="search" class="modal" aria-hidden="true">
-        <div class="container" role="dialog" aria-labelledby="search_title" aria-modal="true">
-            <header class="modal_header">
-                <h3 id="search_title">통합 검색</h3>
-            </header>
-            <div class="modal_body">
-                <div class="content">
-                    
-                </div>
-            </div>
-            <button role="button" class="btn_modal_close" onclick="app.modal('search',false)" title="통합 검색">팝업닫기</button>
-        </div>
-    </section>
 
     <script>
         var app = {
+
+        	clickEvent : function(){
+        		$(".addr_2 button").on("click" , function(){
+        			var el = $(this);
+        			if(el.parent().is(".active")){
+        				el.parent().removeClass('active');
+        			} else {
+        				el.parent().addClass('active');
+        			}
+        		})
+
+        		$(".condition__btn--control").on("click" , function(){
+        			var el = $(this);
+        			if(el.is(".active")){
+        				el.removeClass('active');
+        				$(".condition_cont").stop().slideUp("fast");
+        			} else {
+        				el.addClass('active');
+        				$(".condition_cont").stop().slideDown("fast");
+        			}
+        		});
+
+        		$(".btn__group--tag button").on("click" , function(){
+                    $(this).toggleClass("active");
+        		});
+
+        	},
+
             nav : function(){
                 var $nav = $(".navlist li");
                 $nav.on("click" , "a" , function(e){
                    var $value = $(this).attr("class");
+                   if($value.search(/\s/) != -1) {
+                        $value = $value.split(" ")[0];
+                    }
                    switch ($value) {
                    	case "hmn_sch":
-                   		console.log("검색");
+                        var el = $(this);
+                        if(el.is(".active")){
+                            el.removeClass('active');
+                        } else {
+                            el.addClass('active');
+                        }
                    		break;
                    	case "hmn_route":
                    		console.log("경로");
@@ -523,13 +721,19 @@
                    		console.log("없음");
                    		break;
                    }
-
                     return false;
                 });
             },
             panel : function(){
                 $(".panel_control button").on("click" , function(e){
-                    
+                    var $btn = $(this);
+                  	if($btn.is(".btn__panel--open")){
+                  		$btn.removeClass("btn__panel--open").addClass("btn__panel--close");
+                  		$("#search_panel").addClass("panel");
+                  	} else {
+                  		$btn.removeClass("btn__panel--close").addClass("btn__panel--open");
+                  		$("#search_panel").removeClass("panel");
+                  	}
                 })
             },
 
@@ -555,7 +759,7 @@
 			        if($('.map_slider .s_handle').css('display') == 'none'){
 			            $('.map_slider').mapslider().on();
 			            $('.s_handle, .s_right.image img').show();
-			        } else{
+			        } else {
 			            $('.map_slider').mapslider().off().find('.s_left.image').css('width','100%');
 			            $('.s_handle, .s_right.image img').hide();
 			        }
@@ -564,11 +768,11 @@
             init : function(){
                 this.nav();
                 this.mapDevision();
+                this.panel();
+                this.clickEvent();
             }
         }
-        app.init();
-
-        
+        app.init();       
     </script>
     
 </body>

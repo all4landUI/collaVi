@@ -36,7 +36,6 @@ body{
 		}
 	}
 	
-
 	position:fixed;
 	top:15px;
 	left:85px;
@@ -63,6 +62,9 @@ body{
 	width:100%;
 	button{
 		@include icon_el(0,0,56px,20px,"btn_panel_control.png","false");
+		&.btn__panel--close{
+			background-position:0 -20px;
+		}
 	}
 }
 
@@ -231,14 +233,14 @@ body{
 				font-size:0;
 				text-indent:-9999em;
 				display:block;
-				&.--close{
+				&.active{
 					background-position:0 -15px;
 				}
 			}
 		}
 	}
 	.condition_cont{
-		
+		display:none;	
 	}
 	ul.input_wrap{
 			padding-bottom:15px;
@@ -277,7 +279,8 @@ body{
 			.btn__group--tag{
 				display:inline-block;
 				button{
-					&:focus,
+					background-color:#cacaca;
+					color:#fff;
 					&.active{
 						background-color:#2f5691;
 					}
@@ -321,7 +324,6 @@ body{
 				display:block;
 				padding-left:25px;
 				position:relative;
-				
 				&.addr_1{
 					color:#666;
 					font-size:13px;
@@ -341,11 +343,11 @@ body{
 					font-size:13px;
 					margin-top:5px;
 					&.active{
-						&:after{
+						button{
 							background-position:0 -16px;
 						}
 					}
-					&:after{
+					button{
 						content:"";
 						@include icon_el(0,0,16px,16px,"bg_addr2.png" ,"true");
 					}

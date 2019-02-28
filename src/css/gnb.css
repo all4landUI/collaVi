@@ -7,21 +7,31 @@
 #aside { position: fixed; left: 0; top: 0; height: 100%; width: 70px; background-color: #fff; z-index: 12; }
 
 #nav .navlist li a { display: block; position: relative; text-align: center; padding-top: 46px; padding-bottom: 18px; width: 70px; font-size: 12px; }
-#nav .navlist li a.hmn_mod, #nav .navlist li a.hnm_sports { width: calc(100% - 8px); margin-left: 4px; background-color: #98a9ba; color: #fff; border-radius: 5px; height: 70px; padding-top: 40px; }
-#nav .navlist li a.hnm_sports { margin-top: 4px; padding: calc-percent(10px, 10px); }
+#nav .navlist li a.hmn_mod, #nav .navlist li a.hmn_sports { width: calc(100% - 8px); margin-left: 4px; background-color: #98a9ba; color: #fff; border-radius: 5px; height: 70px; padding-top: 40px; }
+#nav .navlist li a.hmn_mod:hover, #nav .navlist li a.hmn_sports:hover { text-decoration: underline; }
+#nav .navlist li a.hmn_sports { margin-top: 4px; }
 #nav .navlist li a:after { content: ""; display: block; position: absolute; background-image: url(../../images/sprite_nav.png); background-repeat: no-repeat; width: 20px; height: 20px; top: 18px; left: 50%; margin-left: -10px; }
-#nav .navlist li a.hmn_sch.active { background-color: #0277bd; color: #fff; }
+#nav .navlist li a.hmn_sch.active { background-color: #0277bd !important; color: #fff !important; }
 #nav .navlist li a.hmn_sch.active:after { background-position: -25px -0px; }
+#nav .navlist li a.hmn_sch:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_sch:after { background-position: 0 -0px; }
+#nav .navlist li a.hmn_route:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_route:after { background-position: 0 -25px; }
 #nav .navlist li a.hmn_layer:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_layer:after { background-position: 0 -50px; }
+#nav .navlist li a.hmn_file:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_file:after { background-position: 0 -75px; }
+#nav .navlist li a.hmn_issue:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_issue:after { background-position: 0 -100px; }
+#nav .navlist li a.hmn_memo:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_memo:after { background-position: 0 -125px; }
+#nav .navlist li a.hmn_fav:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_fav:after { background-position: 0 -150px; }
+#nav .navlist li a.hmn_loc:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_loc:after { width: 25px; margin-left: -12.5px; background-position: 0 -175px; }
+#nav .navlist li a.hmn_rad:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_rad:after { background-position: 0 -200px; }
+#nav .navlist li a.hmn_adm:hover { background-color: #f0f0f0; }
 #nav .navlist li a.hmn_adm:after { background-position: 0 -225px; }
 #nav .navlist li a.hmn_mod:after { background-position: 0 -250px; }
-#nav .navlist li a.hnm_sports:after { background-position: 0 -275px; }
+#nav .navlist li a.hmn_sports:after { background-position: 0 -275px; }

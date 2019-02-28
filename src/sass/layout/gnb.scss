@@ -52,7 +52,7 @@
 				width:70px;
 				font-size:12px;
 				&.hmn_mod,
-				&.hnm_sports{
+				&.hmn_sports{
 					width:calc(100% - 8px);
 					margin-left:4px;
 					background-color:#98a9ba;
@@ -60,8 +60,11 @@
 					border-radius:5px;
 					height:70px;
 					padding-top:40px;
+					&:hover{
+						text-decoration:underline;
+					}	
 				}
-				&.hnm_sports{
+				&.hmn_sports{
 					margin-top:4px;
 				}
 				&:after{
@@ -76,23 +79,25 @@
 					left:50%;
 					margin-left:-10px;
 				}
-				
-				@each $obj in (hmn_sch:0, hmn_route:1, hmn_layer:2, hmn_file:3 , hmn_issue:4 , hmn_memo:5 ,hmn_fav:6 , hmn_loc:7 , hmn_rad:8 , hmn_adm:9 , hmn_mod:10 , hnm_sports:11) {
+				@each $obj in (hmn_sch:0, hmn_route:1, hmn_layer:2, hmn_file:3 , hmn_issue:4 , hmn_memo:5 ,hmn_fav:6 , hmn_loc:7 , hmn_rad:8 , hmn_adm:9 , hmn_mod:10 , hmn_sports:11) {
 					&.#{nth($obj,1)}{
 						@if nth($obj,1) == "hmn_sch"{
 							&.active{
-								background-color:#0277bd;
-								color:#fff;
+								background-color:#0277bd !important;
+								color:#fff !important;
 								&:after{
 									background-position:-25px -#{nth($obj,2)*25}px;	
 								}
 							}
 						}
-						@if nth($obj,1) == "hmn_layer"{
-							&:hover{
-								background-color:#f0f0f0;
+						&:hover{
+							@if nth($obj,1) != "hmn_mod"{
+								@if nth($obj,1) != "hmn_sports"{
+									background-color:#f0f0f0;
+								} 
 							}
 						}
+						
 					  	&:after{
 					  		@if nth($obj,1) == "hmn_loc"{
 					  			width:25px;
