@@ -60,6 +60,8 @@ controls */
 .item_control .item_list ul { overflow: hidden; }
 .item_control .item_list ul li { float: left; border-right: 1px solid #e6e6e6; background-color: #fff; }
 .item_control .item_list ul li button:hover { background-color: #f0f0f0; }
+.item_control .item_list ul.dobule { border-right: 1px solid #595959; }
+.item_control .item_list ul.dobule li:last-child { border-right: none; }
 
 .hmn_control, .hmn_widget { background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.35); }
 
@@ -87,8 +89,10 @@ controls */
 .spr_4 button:hover { background-color: #f0f0f0; }
 .spr_4 span:after { top: 7px; width: 16px; height: 18px; background-position: 0 -90px; margin-left: -8px; }
 
+.spr_5 button:hover { background-color: #f0f0f0; }
 .spr_5 span:after { top: 16px; width: 13px; height: 13px; background-position: 0 -120px; margin-left: -6.5px; }
 
+.spr_6 button:hover { background-color: #f0f0f0; }
 .spr_6 span:after { top: 22px; width: 13px; height: 1px; background-position: 0 -150px; margin-left: -6.5px; }
 
 .spr_7 .btn_option span:after { top: 7px; width: 16px; height: 16px; background-position: 0 -180px; margin-left: -8px; }
@@ -96,6 +100,10 @@ controls */
 .spr_7 ul li:first-child + li span:after { top: 7px; width: 16px; height: 16px; background-position: -60px -180px; margin-left: -8px; }
 .spr_7 ul li:first-child + li + li span:after { top: 7px; width: 16px; height: 16px; background-position: -90px -180px; margin-left: -8px; }
 
+.spr_8 button:hover { background-color: #f0f0f0; }
 .spr_8 span:after { top: 7px; width: 18px; height: 15px; background-position: 0 -210px; margin-left: -9px; }
 
+.spr_9 button:hover { background-color: #f0f0f0; }
 .spr_9 span:after { top: 7px; width: 16px; height: 16px; background-position: 0 -240px; margin-left: -8px; }
+
+/*# sourceMappingURL=gnb.css.map */

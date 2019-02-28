@@ -228,6 +228,12 @@ controls
  					background-color:#f0f0f0;
  				}
  			}
+	 		&.dobule{
+	 			border-right: 1px solid #595959;
+	 			li{
+	 				&:last-child{border-right: none;}
+	 			}
+	 		}
  		}
  	}
  }
@@ -374,6 +380,9 @@ controls
 
 
 .spr_5{
+	button:hover{
+		background-color:#f0f0f0;
+	}
  	span:after{
  		top:16px;
  		@include spr_image(13px,13px,0,-120px)
@@ -381,6 +390,9 @@ controls
  }
 
  .spr_6{
+ 	button:hover{
+		background-color:#f0f0f0;
+	}
  	span:after{
  		top:22px;
  		@include spr_image(13px,1px,0,-150px)
@@ -418,6 +430,9 @@ controls
 
 
  .spr_8{
+ 	button:hover{
+		background-color:#f0f0f0;
+	}
  	span:after{
  		top:7px;
  		@include spr_image(18px,15px,0,-210px)
@@ -425,6 +440,9 @@ controls
  }
 
  .spr_9{
+ 	button:hover{
+		background-color:#f0f0f0;
+	}
  	span:after{
  		top:7px;
  		@include spr_image(16px,16px,0,-240px)
