@@ -33,7 +33,7 @@
 #facility .attr_menu { float: left; width: 169px; }
 #facility .menu_list .menu_level_1 { border-bottom: 1px solid #ddd; }
 #facility .menu_list .menu_level_1.active .menu_title { background-color: #0277bd; color: #fff; }
-#facility .menu_list .menu_level_1.active .menu_title:after { background-position: 0 -10px; }
+#facility .menu_list .menu_level_1.active .menu_title:after { background-position: 0 -5px; }
 #facility .menu_list .menu_level_1.active ul { display: block; }
 #facility .menu_list .menu_level_1 .menu_title { display: block; width: 169px; position: relative; height: 30px; padding: 0 10px; text-align: left; font-weight: 700; }
 #facility .menu_list .menu_level_1 .menu_title:after { content: ""; display: block; position: absolute; right: 10px; top: 12px; width: 10px; height: 5px; background-repeat: no-repeat; background-image: url(../../images/btn_arrow_fac.png); }

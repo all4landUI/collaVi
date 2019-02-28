@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="src/css/gnb.css">
     <link rel="stylesheet" type="text/css" href="src/css/map.css">
     <link rel="stylesheet" type="text/css" href="src/css/pannel.css">
-    <link rel="stylesheet" type="text/css" href="src/css/right_gnb.css">
     <title>HYUNDAI MnSOFT Collavi</title>
 	<script src="src/js/libs/jQuery/1.12.3/jquery.min.js"></script>
 	<script src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
@@ -331,8 +330,8 @@
 
         <aside id="map_control">
             <h3 class="blind">지도 컨트롤</h3>
-
-            <div id="map_properties">
+            <nav id="map_properties">
+                <!-- 
                 <ul id="first_map_tool" class="com_map_tool">
                     <li class="bg_mapico">
                         <a href="#" class="tool_depth01">배경지도</a>
@@ -393,9 +392,76 @@
                         <a href="#">설정</a>
                     </li>
                 </ul>
+                -->
 
-            </div>
+                <ul class="hmn_control">
+                    <li class="item_control fir spr_1">
+                        <button role="button" class="btn_option"><span>배경지도</span></button>
+                        <div class="item_list sort">
+                            <ul>
+                                <li><button role="button"><span>기본</span></button></li>
+                                <li><button role="button"><span>흑백</span></button></li>
+                                <li><button role="button"><span>다음</span></button></li>
+                                <li><button role="button"><span>네이버</span></button></li>
+                                <li><button role="button"><span>영상</span></button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item_control spr_2">
+                        <button role="button" class="btn_option"><span>로드뷰</span></button>
+                        <div class="item_list load_view">
+                            <ul>
+                                <li><button role="button"><span>로드뷰</span></button></li>
+                                <li><button role="button"><span>거리뷰</span></button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item_control spr_3">
+                        <button role="button" class="btn_option"><span>부가정보</span></button>
+                        <div class="item_list add">
+                            <ul class="l1">
+                                <li><button role="button"><span>CCTV</span></button></li>
+                                <li><button role="button"><span>교통</span></button></li>
+                                <li><button role="button"><span>유고</span></button></li>
+                            </ul>
+                            <ul class="dobule l2">
+                                <li><button role="button"><span>EV충전소</span></button></li>
+                                <li><button role="button"><span>유가</span></button></li>
+                                <li><button role="button"><span>날씨</span></button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item_control spr_4">
+                        <button role="button"><span>지도분할</span></button>
+                    </li>
+                </ul>
 
+                <ul class="hmn_widget">
+                    <li class="item_control spr_5">
+                        <button role="button" title="확대"><span></span></button>
+                    </li>
+                    <li class="item_control spr_6">
+                        <button role="button" title="축소"><span></span></button>
+                    </li>
+                    <li class="item_control spr_7">
+                        <button role="button" class="btn_option"><span>길이재기</span></button>
+                        <div class="item_list size">
+                            <ul>
+                                <li><button role="button"><span>초기화</span></button></li>
+                                <li><button role="button"><span>반경측정</span></button></li>
+                                <li><button role="button"><span>면적재기</span></button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item_control spr_8">
+                        <button role="button"><span>지도저장</span></button>
+                    </li>
+                    <li class="item_control spr_9">
+                        <button role="button"><span>설정</span></button>
+                    </li>
+                </ul>
+
+            </nav>
         </aside>    
         <!-- #map_control -->
 
@@ -439,7 +505,7 @@
                     				<li><a href="#">3266</a></li>
                     			</ul>
                     		</li>
-                    		<li class="menu_level_1 active"><button role="button" class="menu_title">차도면</button>
+                    		<li class="menu_level_1"><button role="button" class="menu_title">차도면</button>
                     			<ul>
                     				<li><a href="#">3261</a></li>
                     				<li><a href="#">3266</a></li>
@@ -610,19 +676,19 @@
                         <li>
                             <dl>
                                 <dt>좌표체계</dt>
-                                <dd><input type="text" name="" id="" class="tf_text" disabled placeholder="GRS80"></dd>
+                                <dd><input type="text" name="" id="" class="tf_text" disabled value="GRS80"></dd>
                             </dl>
                         </li>
                         <li>
                             <dl>
                                 <dt>경도</dt>
-                                <dd><input type="text" name="" id="" class="tf_text" placeholder="126.9519"></dd>
+                                <dd><input type="text" name="" id="" class="tf_text" value="126.9519"></dd>
                             </dl>
                         </li>
                         <li>
                             <dl>
                                 <dt>위도</dt>
-                                <dd><input type="text" name="" id="" class="tf_text" placeholder="37.5323"></dd>
+                                <dd><input type="text" name="" id="" class="tf_text" value="37.5323"></dd>
                             </dl>
                         </li>
                     </ul>
@@ -662,6 +728,27 @@
         				$(".condition_cont").stop().slideDown("fast");
         			}
         		});
+
+                
+
+                $(".btn_option").on("click" , function(){
+                    var el = $(this);
+                    if(el.parent().is(".active")){
+                        el.parent().removeClass('active')
+                    } else {
+                        el.parent().addClass('active');
+                    }
+                })
+
+                $(".attr_menu .menu_title").on("click" , function(){
+                    var el = $(this);
+                    if(el.parent().is(".active")){
+                        el.parent().removeClass('active')
+                    } else {
+                        el.parent().addClass('active').siblings().removeClass("active");
+                    }
+                });
+
 
         		$(".btn__group--tag button").on("click" , function(){
                     $(this).toggleClass("active");
@@ -774,16 +861,7 @@
             }
         }
         app.init();
-    
-    </script>
 
-    
-    
-</body>
-
-<script>
-    
-    $(document).ready(function(){
         $(".com_map_tool>li a").click(function(){
             var submenu = $(this).next("ul");
             var sub_close = $(this).next("ul .sub_close");
@@ -794,6 +872,11 @@
                 submenu.show();
             };
         });
-    });
-</script>
+
+    
+    </script>
+
+    
+    
+</body>
 </html>

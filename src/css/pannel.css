@@ -1,3 +1,5 @@
+button { outline: none; }
+
 body { letter-spacing: -0.05em; }
 
 #search_panel { position: fixed; top: 15px; left: 85px; z-index: 11; width: 350px; background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.35); }
