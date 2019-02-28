@@ -216,6 +216,18 @@ controls
 
  		&.size{
  			width:136px;
+ 			
+ 			ul{
+ 				li{
+ 					&:first-child{
+ 						button{
+ 							span{
+ 								color:#a7a7a7;
+ 							}
+ 						}
+ 					}
+ 				}
+ 			}
  		}
 
  		ul{

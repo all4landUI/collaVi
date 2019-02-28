@@ -57,6 +57,7 @@ controls */
 .item_control .item_list.add { width: 136px; }
 .item_control .item_list.add .dobule { border-top: 1px solid #e6e6e6; }
 .item_control .item_list.size { width: 136px; }
+.item_control .item_list.size ul li:first-child button span { color: #a7a7a7; }
 .item_control .item_list ul { overflow: hidden; }
 .item_control .item_list ul li { float: left; border-right: 1px solid #e6e6e6; background-color: #fff; }
 .item_control .item_list ul li button:hover { background-color: #f0f0f0; }
