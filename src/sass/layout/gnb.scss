@@ -140,17 +140,6 @@ controls
  		}
  		.btn_option{
  			&:after{display:none;}
- 			&:before{
-	 			content:"";
-	 			display:block;
-	 			position:absolute;
-	 			top:-1px;
-	 			left:-1px;
-	 			height:44px;
-	 			width:45px;
-	 			border:1px solid #595959;
-	 			border-left:0;
-	 		}
  		}
  		
  	}
@@ -181,6 +170,7 @@ controls
  	}
  	.btn_option{
  		position:relative;
+ 		z-index:1000;
  		&:after{
  			content:"";
  			display:block;
@@ -195,41 +185,48 @@ controls
  	.item_list{
  		display:none;
  		position:absolute;
- 		right:44px;
+ 		right:-1px;
  		top:-1px;
- 		border:1px solid #595959;
- 		border-right:0;
+ 		padding:1px 43px 1px 1px;
  		&.sort{
- 			width:226px;
+ 			width:271px;
+ 			background:url(../../images/bg1.png) no-repeat 0 0;
  		}
 
  		&.load_view{
- 			width:91px;
+ 			width:136px;
+ 			background:url(../../images/bg2.png) no-repeat 0 0;
  		}
 
  		&.add{
- 			width:136px;
+ 			width:181px;
+ 			height:91px;
+ 			background:url(../../images/bg3.png) no-repeat 0 0;
  			.dobule{
- 				border-top:1px solid #e6e6e6;
+ 				
  			}
  		}
 
  		&.size{
- 			width:136px;
+ 			width:181px;
+ 			background:url(../../images/bg4.png) no-repeat 0 0;
  		}
 
  		ul{
  			overflow:hidden;
  			li{
+ 				&:first-child{
+ 					border-left:0;
+ 				}
  				float:left;
- 				border-right:1px solid #e6e6e6;
+ 				border-left:1px solid #e6e6e6;
  				background-color:#fff;
  				button:hover{
  					background-color:#f0f0f0;
  				}
  			}
 	 		&.dobule{
-	 			border-right: 1px solid #595959;
+	 			
 	 			li{
 	 				&:last-child{border-right: none;}
 	 			}
