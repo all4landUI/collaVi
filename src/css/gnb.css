@@ -55,6 +55,7 @@ controls */
 .item_control .item_list.load_view { width: 136px; background: url(../../images/bg2.png) no-repeat 0 0; }
 .item_control .item_list.add { width: 181px; height: 91px; background: url(../../images/bg3.png) no-repeat 0 0; }
 .item_control .item_list.size { width: 181px; background: url(../../images/bg4.png) no-repeat 0 0; }
+.item_control .item_list.size ul li:first-child button span { color: #a7a7a7; }
 .item_control .item_list ul { overflow: hidden; }
 .item_control .item_list ul li { float: left; border-left: 1px solid #e6e6e6; background-color: #fff; }
 .item_control .item_list ul li:first-child { border-left: 0; }

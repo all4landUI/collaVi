@@ -210,6 +210,17 @@ controls
  		&.size{
  			width:181px;
  			background:url(../../images/bg4.png) no-repeat 0 0;
+ 				li{
+ 					&:first-child{
+ 						button{
+ 							span{
+ 								color:#a7a7a7;
+ 							}
+ 						}
+ 					}
+ 				}
+ 			}
+
  		}
 
  		ul{
