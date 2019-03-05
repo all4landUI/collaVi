@@ -42,8 +42,7 @@ controls */
 
 .item_control { position: relative; border-top: 1px solid #e6e6e6; }
 .item_control.fir { border-top: 0; }
-.item_control.active .item_list { display: block; }
-.item_control.active + li { border-top: 0; padding-top: 1px; }
+.item_control.active .item_list { display: block; z-index: 30; }
 .item_control.active .btn_option:after { display: none; }
 .item_control button { display: block; color: #222; font-size: 9px; text-align: center; width: 44px; height: 44px; line-height: 1; letter-spacing: -0.05em; }
 .item_control button span { display: block; vertical-align: top; padding-top: 29px; position: relative; height: 44px; }
@@ -104,3 +103,5 @@ controls */
 
 .spr_9 button:hover { background-color: #f0f0f0; }
 .spr_9 span:after { top: 7px; width: 16px; height: 16px; background-position: 0 -240px; margin-left: -8px; }
+
+/*# sourceMappingURL=gnb.css.map */

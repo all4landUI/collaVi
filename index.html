@@ -42,8 +42,8 @@
                 <li><a href="#" role="button" class="hmn_loc">주행궤적</a></li>
                 <li><a href="#" role="button" class="hmn_rad">RAD</a></li>
                 <li><a href="#" role="button" class="hmn_adm">관리자</a></li>
-                <li><a href="#" role="button" class="hmn_mod">지도수정</a></li>
-                <li><a href="#" role="button" class="hmn_sports">스포츠정보</a></li>
+                <li><a href="#" role="button" class="hmn_mod" onclick="app.modal(this,true)" aria-controls="mapedit">지도수정</a></li>
+                <li><a href="#" role="button" class="hmn_sports" onclick="app.modal(this,true)" aria-controls="sportsinfo">스포츠정보</a></li>
             </ul>
         </nav>
     </aside>
@@ -58,7 +58,7 @@
                     <!-- 로그아웃일때 
                     <button class="btn__login" role="button">로그인</a>
                     -->
-                    <a href="#" class="btn__logout" role="button"><i></i>로그아웃</a>
+                    <a href="login.html" class="btn__logout" role="button"><i></i>로그아웃</a>
                 </div>
             </header>
             <!-- .search_header -->
@@ -331,69 +331,6 @@
         <aside id="map_control">
             <h3 class="blind">지도 컨트롤</h3>
             <nav id="map_properties">
-                <!-- 
-                <ul id="first_map_tool" class="com_map_tool">
-                    <li class="bg_mapico">
-                        <a href="#" class="tool_depth01">배경지도</a>
-                        <ul class="tool_depth02">
-                            <li><a href="#">기본</a></li>
-                            <li><a href="#">흑백</a></li>
-                            <li><a href="#">다음</a></li>
-                            <li><a href="#">네이버</a></li>
-                            <li><a href="#">영상</a></li>
-                            <li class="sub_close"><a href="#">배경지도</a></li>
-                        </ul>
-                    </li>
-                    <li class="load_mapico">
-                        <a href="#" class="tool_depth01">로드뷰</a>
-                        <ul class="tool_depth02">
-                            <li><a href="#">로드뷰</a></li>
-                            <li><a href="#">거리뷰</a></li>
-                            <li class="sub_close"><a href="#">로드뷰</a></li>
-                        </ul>
-                    </li>
-                    <li class="additional_mapico">
-                        <a href="#" class="tool_depth01">부가정보</a>
-                        <ul class="tool_depth02">
-                            <li><a href="#">CCTV</a></li>
-                            <li><a href="#">교통</a></li>
-                            <li><a href="#">유고</a></li>
-                            <li class="sub_close"><a href="#">부가정보</a></li>
-                            <li><a href="#">EV충전소</a></li>
-                            <li><a href="#">유가</a></li>
-                            <li><a href="#">날씨</a></li>
-                        </ul>
-                    </li>
-                    <li class="division_mapico">
-                        <a href="#">지도분할</a>
-                    </li>
-                </ul>
-                
-                <ul id="second_map_tool" class="com_map_tool">
-                    <li class="zoom_pluse-mapico">
-                        <a href="#">zoom_plus</a>
-                    </li>
-                    <li class="zoom_minus-mapico">
-                        <a href="#">zoom_minus</a>
-                    </li>
-                    <li class="length_mapico">
-                        <a href="#" class="tool_depth01">길이재기</a>
-                        <ul class="tool_depth02">
-                            <li><a href="#">초기화</a></li>
-                            <li><a href="#">반경측정</a></li>
-                            <li><a href="#">면적재기</a></li>
-                            <li class="sub_close"><a href="#">길이재기</a></li>
-                        </ul>
-                    </li>
-                    <li class="save_mapico">
-                        <a href="#">지도저장</a>
-                    </li>
-                    <li class="set_mapico">
-                        <a href="#">설정</a>
-                    </li>
-                </ul>
-                -->
-
                 <ul class="hmn_control">
                     <li class="item_control fir spr_1">
                         <button role="button" class="btn_option"><span>배경지도</span></button>
@@ -432,7 +369,7 @@
                         </div>
                     </li>
                     <li class="item_control spr_4">
-                        <button role="button"><span>지도분할</span></button>
+                        <button class="btn_partition" role="button"><span>지도분할</span></button>
                     </li>
                 </ul>
 
@@ -483,7 +420,36 @@
     </sectoin>
     <!-- .wrapper -->
 
+    
+    <!-- 지도수정 레이어 ID "mapaedit" aria-controls 추가하면 오픈 가능  -->
+    <section id="mapedit" class="modal" aria-hidden="true">
+        <div class="container" role="dialog" aria-labelledby="coord_title" aria-modal="true">
+            <header class="modal_header">
+                <h3 id="fac_title">지도수정</h3>
+            </header>
+            <div class="modal_body">
+            </div>
+            <button role="button" class="btn_modal_close" onclick="app.modal('mapedit',false)" title="지도 수정">팝업닫기</button>
+        </div>
+    </section>
+    <!-- #mapaedit -->
 
+
+    <!-- 스포츠 정보 레이어 ID "sportsinfo" aria-controls 추가하면 오픈 가능  -->
+    <section id="sportsinfo" class="modal" aria-hidden="true">
+        <div class="container" role="dialog" aria-labelledby="coord_title" aria-modal="true">
+            <header class="modal_header">
+                <h3 id="fac_title">스포츠 정보</h3>
+            </header>
+            <div class="modal_body">
+            </div>
+            <button role="button" class="btn_modal_close" onclick="app.modal('sportsinfo',false)" title="스포츠 정보">팝업닫기</button>
+        </div>
+    </section>
+    <!-- #mapaedit -->
+
+
+    <!-- 시설물 정보 레이어 ID "facility" aria-controls 추가하면 오픈 가능  -->
     <section id="facility" class="modal" aria-hidden="true">
         <div class="container" role="dialog" aria-labelledby="fac_title" aria-modal="true">
             <header class="modal_header">
@@ -582,7 +548,9 @@
         </div>
     </section>
     <!-- #facility -->
+    
 
+    <!-- 통합검색 레이어 ID "search" aria-controls 추가하면 오픈 가능  -->
     <section id="search" class="modal" aria-hidden="true">
         <div class="container" role="dialog" aria-labelledby="search_title" aria-modal="true">
             <header class="modal_header">
@@ -663,8 +631,9 @@
         </div>
     </section>
     <!-- #search -->
+    
 
-
+    <!-- 좌표이동 레이어 ID "moveToCoord" aria-controls 추가하면 오픈 가능  -->
     <section id="moveToCoord" class="modal" aria-hidden="true">
         <div class="container" role="dialog" aria-labelledby="coord_title" aria-modal="true">
             <header class="modal_header">
@@ -768,8 +737,12 @@
                         var el = $(this);
                         if(el.is(".active")){
                             el.removeClass('active');
+                            $(".panel_control button").removeClass("btn__panel--close").addClass("btn__panel--open");
+                            $("#search_panel").removeClass("panel");
                         } else {
                             el.addClass('active');
+                            $("#search_panel").addClass("panel");
+                            $(".panel_control button").removeClass("btn__panel--open").addClass("btn__panel--close");
                         }
                    		break;
                    	case "hmn_route":
@@ -815,13 +788,15 @@
             panel : function(){
                 $(".panel_control button").on("click" , function(e){
                     var $btn = $(this);
-                  	if($btn.is(".btn__panel--open")){
-                  		$btn.removeClass("btn__panel--open").addClass("btn__panel--close");
-                  		$("#search_panel").addClass("panel");
-                  	} else {
-                  		$btn.removeClass("btn__panel--close").addClass("btn__panel--open");
-                  		$("#search_panel").removeClass("panel");
-                  	}
+                    if($btn.is(".btn__panel--open")){
+                        $btn.removeClass("btn__panel--open").addClass("btn__panel--close");
+                        $("#search_panel").addClass("panel");
+                        $(".hmn_sch").addClass("active");
+                    } else {
+                        $btn.removeClass("btn__panel--close").addClass("btn__panel--open");
+                        $("#search_panel").removeClass("panel");
+                        $(".hmn_sch").removeClass("active");
+                    }
                 })
             },
 
@@ -843,7 +818,7 @@
             },
 
             mapDevision : function(){
-            	$('#timeSeries').click(function(){
+            	$('.btn_partition').click(function(){
 			        if($('.map_slider .s_handle').css('display') == 'none'){
 			            $('.map_slider').mapslider().on();
 			            $('.s_handle, .s_right.image img').show();

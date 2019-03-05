@@ -67,6 +67,10 @@
 #search .btn_wrap .btn_submit { background-color: #2a3a4a; }
 #search .btn_wrap .btn_cancel { background-color: #cacaca; }
 
+#mapedit .container .modal_body { width: 900px; height: 600px; }
+
+#sportsinfo .container .modal_body { width: 900px; height: 600px; }
+
 #moveToCoord ul li + li { margin-top: 6px; }
 #moveToCoord ul li dl { overflow: hidden; }
 #moveToCoord ul li dl dd, #moveToCoord ul li dl dt { float: left; }
