@@ -2,7 +2,7 @@ button { outline: none; }
 
 body { letter-spacing: -0.05em; }
 
-#search_panel { position: fixed; top: 15px; left: 85px; z-index: 11; width: 350px; background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.35); }
+#search_panel { position: fixed; top: 15px; left: 85px; z-index: 11; width: 352px; background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.35); }
 #search_panel.panel .panel_cont { display: block; }
 #search_panel.panel .search_wrapper { padding-bottom: 30px; }
 #search_panel .search_wrapper { position: relative; }
@@ -20,13 +20,14 @@ body { letter-spacing: -0.05em; }
 .search_header .user_util .btn__logout i { display: inline-block; position: absolute; left: 3px; top: 2px; width: 20px; height: 20px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/icon_user_logout.png); font-size: 0; text-indent: -9999em; }
 .search_header:after { content: ""; display: block; overflow: hidden; clear: both; }
 
-.search_cate { border: 1px solid #eaeaea; border-left: 0; border-right: 0; }
+.search_cate ul { width: 350px; margin: 0 auto; text-align: center; box-sizing: border-box; overflow: hidden; border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; }
 .search_cate ul:after { content: ""; display: block; overflow: hidden; clear: both; }
-.search_cate ul li { float: left; width: 20%; }
+.search_cate ul li { float: left; width: 70px; }
 .search_cate ul li.active [role="tab"] { background: #0277bd !important; color: #fff; }
 .search_cate ul li [role="tab"] { display: block; position: relative; text-align: center; color: #bbb; font-size: 14px; width: 100%; height: 49px; line-height: 49px; background: url(../../images/blit_search_tab.gif) no-repeat 100% 50%; }
 .search_cate ul li [role="tab"]:focus { background: #0277bd !important; color: #fff; }
 .search_cate ul li [role="tab"].end { background: none; }
+.search_cate ul li:after { content: ""; display: block; overflow: hidden; clear: both; }
 
 .tf_text { border: 1px solid #ddd; display: inline-block; height: 35px; padding: 0 9px 0 9px; font-size: 13px; }
 .tf_text.block { display: block; width: 100%; }
@@ -89,3 +90,5 @@ body { letter-spacing: -0.05em; }
 #paging ul li strong, #paging ul li a { display: block; padding: 4px; font-size: 13px; }
 #paging ul li a { color: #999; }
 #paging ul li strong { font-weight: 400; color: #2f5691; text-decoration: underline; }
+
+/*# sourceMappingURL=pannel.css.map */
