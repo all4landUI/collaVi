@@ -47,6 +47,7 @@ body{
 	width:352px;
 	background-color:#fff;
 	border:1px solid rgba(0,0,0,0.35);
+
 	.search_wrapper{
 		position:relative;
 	}
@@ -62,8 +63,9 @@ body{
 	left:0;
 	right:0;
 	height:20px;
-	text-align:center;
+	text-align:right;
 	width:100%;
+	padding: 0 20px;
 	button{
 		@include icon_el(0,0,56px,20px,"btn_panel_control.png","false");
 		&.btn__panel--close{
@@ -74,7 +76,7 @@ body{
 
 .search_header{
 	padding:20px 20px 0;
-	height:85px;
+	height:65px;
 	.logo{
 		float:left;
 	}
@@ -111,7 +113,15 @@ body{
 		@include clear();
 	}
 }
-
+.position_info{
+		padding: 15px 20px 20px 20px ;
+		background: #fafafa;
+		p{
+			padding-left: 17px;
+			font-size: 12px;
+			background: url(../../images/position_marker.png) no-repeat;
+		}
+	}
 .search_cate{
 	
 	ul{

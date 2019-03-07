@@ -8,17 +8,20 @@ body { letter-spacing: -0.05em; }
 #search_panel .search_wrapper { position: relative; }
 #search_panel .panel_cont { display: none; width: 100%; height: 100%; }
 
-.panel_control { position: absolute; bottom: 0; left: 0; right: 0; height: 20px; text-align: center; width: 100%; }
+.panel_control { position: absolute; bottom: 0; left: 0; right: 0; height: 20px; text-align: right; width: 100%; padding: 0 20px; }
 .panel_control button { display: inline-block; width: 56px; height: 20px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/btn_panel_control.png); font-size: 0; text-indent: -9999em; }
 .panel_control button.btn__panel--close { background-position: 0 -20px; }
 
-.search_header { padding: 20px 20px 0; height: 85px; }
+.search_header { padding: 20px 20px 0; height: 65px; }
 .search_header .logo { float: left; }
 .search_header .user_util { float: right; }
 .search_header .user_util .btn__login { display: inline-block; border: 1px solid #c9c9c9; border-radius: 15px; color: #666; text-align: center; font-size: 13px; width: 70px; height: 26px; line-height: 24px; }
 .search_header .user_util .btn__logout { display: inline-block; position: relative; padding: 0 15px 0 28px; border: 1px solid #c9c9c9; border-radius: 15px; color: #666; text-align: center; font-size: 13px; height: 26px; line-height: 24px; }
 .search_header .user_util .btn__logout i { display: inline-block; position: absolute; left: 3px; top: 2px; width: 20px; height: 20px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/icon_user_logout.png); font-size: 0; text-indent: -9999em; }
 .search_header:after { content: ""; display: block; overflow: hidden; clear: both; }
+
+.position_info { padding: 15px 20px 20px 20px; background: #fafafa; }
+.position_info p { padding-left: 17px; font-size: 12px; background: url(../../images/position_marker.png) no-repeat; }
 
 .search_cate ul { width: 350px; margin: 0 auto; text-align: center; box-sizing: border-box; overflow: hidden; border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; }
 .search_cate ul:after { content: ""; display: block; overflow: hidden; clear: both; }

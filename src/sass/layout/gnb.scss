@@ -133,7 +133,7 @@ controls
  	&.active{
  		.item_list{
  			display:block;
- 			z-index: 30;
+ 			z-index: 30px;
  		}
  		&+li{
  		
@@ -144,7 +144,11 @@ controls
  		}
  		
  	}
+ 	.on{
+ 		
+ 	}
  	button{
+ 		position: relative;
  		display:block;
  		color:#222;
  		font-size:9px;
@@ -153,20 +157,41 @@ controls
  		height:44px;
  		line-height:1;
  		letter-spacing: -0.05em;
+		z-index: 20;
+ 		&.on:active div,
+ 		&:active div{
+			transform:scale3d(0.8,0.8,0.8);
+      		transition:all 0.1s ease-in;
+ 		}
+ 		&.on div{
+		    transform:scale3d(1,1,1);
+ 		}
+ 		&.on{
+			span{
+		    	color:#0277bd;
+		    }
+ 		}
+ 		div{
+			position: absolute;
+			top: 7px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+
+			transform:scale3d(1,1,1);
+	      	transition:all 0.1s ease-in;
+	    	transition-delay:0.1s;
+			.img_over{
+				display: none;
+			}
+			
+	 	}
  		span{
- 			display:block;
- 			vertical-align:top;
- 			padding-top:29px;
- 			position:relative;
- 			height:44px;
- 			&:after{
- 				content:"";
- 				display:block;
- 				position:absolute;
- 				background-image:url(../../images/right_icon.png);
- 				background-repeat:no-repeat;
- 				left:50%;
- 			}
+ 			position: absolute;
+ 			bottom: 6px;
+ 			display: block;
+ 			width: 100%;
+
  		}
  	}
  	.btn_option{
@@ -189,6 +214,7 @@ controls
  		right:-1px;
  		top:-1px;
  		padding:1px 43px 1px 1px;
+ 		z-index: 10;
  		&.sort{
  			width:271px;
  			background:url(../../images/bg1.png) no-repeat 0 0;
@@ -397,6 +423,11 @@ controls
  		top:16px;
  		@include spr_image(13px,13px,0,-120px)
  	}
+ 	.r_ibtn{
+ 		
+ 		top: 15px;	
+ 	}
+ 	
  }
 
  .spr_6{
@@ -406,6 +437,10 @@ controls
  	span:after{
  		top:22px;
  		@include spr_image(13px,1px,0,-150px)
+ 	}
+ 	.r_ibtn{
+ 		
+ 		top: 15px;	
  	}
  }
 

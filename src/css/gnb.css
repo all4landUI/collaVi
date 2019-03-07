@@ -42,14 +42,18 @@ controls */
 
 .item_control { position: relative; border-top: 1px solid #e6e6e6; }
 .item_control.fir { border-top: 0; }
-.item_control.active .item_list { display: block; z-index: 30; }
+.item_control.active .item_list { display: block; z-index: 30px; }
 .item_control.active .btn_option:after { display: none; }
-.item_control button { display: block; color: #222; font-size: 9px; text-align: center; width: 44px; height: 44px; line-height: 1; letter-spacing: -0.05em; }
-.item_control button span { display: block; vertical-align: top; padding-top: 29px; position: relative; height: 44px; }
-.item_control button span:after { content: ""; display: block; position: absolute; background-image: url(../../images/right_icon.png); background-repeat: no-repeat; left: 50%; }
+.item_control button { position: relative; display: block; color: #222; font-size: 9px; text-align: center; width: 44px; height: 44px; line-height: 1; letter-spacing: -0.05em; z-index: 20; }
+.item_control button.on:active div, .item_control button:active div { transform: scale3d(0.8, 0.8, 0.8); transition: all 0.1s ease-in; }
+.item_control button.on div { transform: scale3d(1, 1, 1); }
+.item_control button.on span { color: #0277bd; }
+.item_control button div { position: absolute; top: 7px; left: 0; width: 100%; text-align: center; transform: scale3d(1, 1, 1); transition: all 0.1s ease-in; transition-delay: 0.1s; }
+.item_control button div .img_over { display: none; }
+.item_control button span { position: absolute; bottom: 6px; display: block; width: 100%; }
 .item_control .btn_option { position: relative; z-index: 1000; }
 .item_control .btn_option:after { content: ""; display: block; position: absolute; left: 1px; bottom: 1px; width: 4px; height: 4px; background: url(../../images/hover_mark.png) no-repeat 0 0; }
-.item_control .item_list { display: none; position: absolute; right: -1px; top: -1px; padding: 1px 43px 1px 1px; }
+.item_control .item_list { display: none; position: absolute; right: -1px; top: -1px; padding: 1px 43px 1px 1px; z-index: 10; }
 .item_control .item_list.sort { width: 271px; background: url(../../images/bg1.png) no-repeat 0 0; }
 .item_control .item_list.load_view { width: 136px; background: url(../../images/bg2.png) no-repeat 0 0; }
 .item_control .item_list.add { width: 181px; height: 91px; background: url(../../images/bg3.png) no-repeat 0 0; }
@@ -89,9 +93,11 @@ controls */
 
 .spr_5 button:hover { background-color: #f0f0f0; }
 .spr_5 span:after { top: 16px; width: 13px; height: 13px; background-position: 0 -120px; margin-left: -6.5px; }
+.spr_5 .r_ibtn { top: 15px; }
 
 .spr_6 button:hover { background-color: #f0f0f0; }
 .spr_6 span:after { top: 22px; width: 13px; height: 1px; background-position: 0 -150px; margin-left: -6.5px; }
+.spr_6 .r_ibtn { top: 15px; }
 
 .spr_7 .btn_option span:after { top: 7px; width: 16px; height: 16px; background-position: 0 -180px; margin-left: -8px; }
 .spr_7 ul li:first-child span:after { top: 7px; width: 16px; height: 16px; background-position: -30px -180px; margin-left: -8px; }
