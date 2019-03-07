@@ -8,10 +8,11 @@
 
 #nav { height: 100%; }
 
-.navlist li a { display: block; position: relative; text-align: center; padding-top: 46px; padding-bottom: 18px; width: 70px; font-size: 12px; }
-.navlist li a.hmn_mod, .navlist li a.hmn_sports { width: calc(100% - 8px); margin-left: 4px; background-color: #98a9ba; color: #fff; border-radius: 5px; height: 70px; padding-top: 40px; }
+.navlist li a { display: block; position: relative; text-align: center; padding-top: 44px; padding-bottom: 18px; width: 70px; font-size: 12px; }
+.navlist li a.hmn_mod, .navlist li a.hmn_sports { width: calc(100% - 8px); margin-left: 4px; background-color: #98a9ba; color: #fff; border-radius: 5px; height: 68px; padding-top: 40px; }
 .navlist li a.hmn_mod:hover, .navlist li a.hmn_sports:hover { text-decoration: underline; }
 .navlist li a.hmn_sports { margin-top: 4px; }
+.navlist li a.hmn_mod { margin-top: 8px; }
 .navlist li a:after { content: ""; display: block; position: absolute; background-image: url(../../images/sprite_nav.png); background-repeat: no-repeat; width: 20px; height: 20px; top: 18px; left: 50%; margin-left: -10px; }
 .navlist li a.hmn_sch.active { background-color: #0277bd !important; color: #fff !important; }
 .navlist li a.hmn_sch.active:after { background-position: -25px -0px; }
@@ -54,6 +55,7 @@ controls */
 .item_control button span { position: absolute; bottom: 6px; display: block; width: 100%; }
 .item_control .btn_option { position: relative; z-index: 1000; }
 .item_control .btn_option:after { content: ""; display: block; position: absolute; left: 1px; bottom: 1px; width: 4px; height: 4px; background: url(../../images/hover_mark.png) no-repeat 0 0; }
+.item_control #solo .rbtn_item.on { background: #f0f0f0; }
 .item_control .item_list { display: none; position: absolute; right: -1px; top: -1px; padding: 1px 43px 1px 1px; z-index: 10; }
 .item_control .item_list.sort { width: 271px; background: url(../../images/bg1.png) no-repeat 0 0; }
 .item_control .item_list.load_view { width: 136px; background: url(../../images/bg2.png) no-repeat 0 0; }
@@ -141,3 +143,7 @@ controls */
 .mCSB_inside > .mCSB_container { margin: 0; }
 
 .mCSB_scrollTools { width: 10px; }
+
+.mCustomScrollBox { padding-bottom: 30px; }
+
+/*# sourceMappingURL=gnb.css.map */

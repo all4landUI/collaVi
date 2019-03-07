@@ -57,7 +57,8 @@ body { letter-spacing: -0.05em; }
 .search_wrap ul.input_wrap li dl:after { content: ""; display: block; overflow: hidden; clear: both; }
 .search_wrap ul.input_wrap li dl dd, .search_wrap ul.input_wrap li dl dt { float: left; }
 .search_wrap ul.input_wrap li dl dt { background: url(../../images/blit_condition_list.gif) no-repeat 0 50%; padding-left: 12px; width: 85px; color: #666; font-size: 13px; height: 29px; line-height: 29px; }
-.search_wrap ul.input_wrap li dl dd input { height: 29px; }
+.search_wrap ul.input_wrap li dl dd { width: calc(100% - 85px); }
+.search_wrap ul.input_wrap li dl dd input { height: 29px; width: 100%; }
 .search_wrap .condition_tag { text-align: center; padding: 15px 0; border-top: 1px solid #eaeaea; }
 .search_wrap .condition_tag .btn__group--tag { display: inline-block; }
 .search_wrap .condition_tag .btn__group--tag button { background-color: #cacaca; color: #fff; display: block; float: left; height: 30px; padding-left: 12px; padding-right: 12px; }
@@ -97,3 +98,5 @@ body { letter-spacing: -0.05em; }
 @media (max-height: 500px) { .search_wrap { height: 260px; }
   .wrapper { height: 500px; overflow-y: auto; }
   #search_panel { position: absolute; } }
+
+/*# sourceMappingURL=pannel.css.map */

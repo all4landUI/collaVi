@@ -287,8 +287,10 @@ body{
 						line-height:29px;
 					}
 					dd{
+						width: calc(100% - 85px);
 						input{
 							height:29px;
+							width: 100%;
 						}
 					}
 				}

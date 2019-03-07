@@ -49,7 +49,7 @@
 			display:block;
 			position:relative;
 			text-align:center;
-			padding-top:46px;
+			padding-top:44px;
 			padding-bottom:18px;
 			width:70px;
 			font-size:12px;
@@ -60,7 +60,7 @@
 				background-color:#98a9ba;
 				color:#fff;
 				border-radius:5px;
-				height:70px;
+				height:68px;
 				padding-top:40px;
 				&:hover{
 					text-decoration:underline;
@@ -68,6 +68,9 @@
 			}
 			&.hmn_sports{
 				margin-top:4px;
+			}
+			&.hmn_mod{
+				margin-top: 8px;
 			}
 			&:after{
 				content:"";
@@ -203,6 +206,13 @@ controls
  			height:4px;
  			background:url(../../images/hover_mark.png) no-repeat 0 0 ;
  		}
+ 	}
+ 	#solo{
+ 		.rbtn_item{
+ 			&.on{
+ 				background:#f0f0f0;
+ 			}
+ 		} 
  	}
  	.item_list{
  		display:none;
@@ -613,4 +623,7 @@ controls
 }
 .mCSB_scrollTools{
 	width:10px;
+}
+.mCustomScrollBox{
+	padding-bottom: 30px;
 }
