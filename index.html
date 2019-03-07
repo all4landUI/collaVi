@@ -18,18 +18,23 @@
 	<script src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
     <script src="src/js/libs/mCustomScrollbar/3.1.5/jquery.mCustomScrollbar.min.js"></script>
     <script src="src/js/imgslider.js"></script>
+    
+
 	<!--<script src="src/js/map.js"></script>-->
 	<!--[if lt IE 9]>
 		<script src="src/js/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="src/js/libs/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+
+
 </head>
 <body>
     <div id="skip">
         <a href="#nav"><span>본문으로 바로가기</span></a>
     </div>
     <aside id="aside">
-        <nav id="nav">
+        <nav id="nav" class="mCustomScrollbar" >
             <h3 class="blind">본문메뉴</h3>
             <ul class="navlist">
                 <li><a href="#" role="button" class="hmn_sch">검색</a></li>
@@ -1125,7 +1130,15 @@
     
     </script>
 
-    
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $("#nav").mCustomScrollbar({
+                    axis : "y"
+                });
+            });
+        })(jQuery);
+    </script>
     
 </body>
 </html>

@@ -41,7 +41,7 @@
 	z-index:12;
 }
 #nav{
-	
+	height:100%;
 }
 .navlist{
 	li{
@@ -608,4 +608,9 @@ controls
 		}
 	}
 }
- 
+.mCSB_inside>.mCSB_container{
+	margin:0;
+}
+.mCSB_scrollTools{
+	width:10px;
+}

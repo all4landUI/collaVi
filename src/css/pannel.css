@@ -37,7 +37,7 @@ body { letter-spacing: -0.05em; }
 
 .select { border: 1px solid #ddd; display: inline-block; height: 35px; padding: 0 9px 0 9px; font-size: 13px; }
 
-.search_wrap { position: relative; overflow-y: auto; padding: 20px 20px 0; height: 720px; }
+.search_wrap { position: relative; overflow-y: auto; padding: 20px 20px 0; height: calc(100vh - 240px); }
 .search_wrap [role="tabpanel"] { display: none; }
 .search_wrap [role="tabpanel"].active { display: block; }
 .search_wrap .search_title { margin: 0 0 15px; position: relative; }
@@ -94,4 +94,6 @@ body { letter-spacing: -0.05em; }
 #paging ul li a { color: #999; }
 #paging ul li strong { font-weight: 400; color: #2f5691; text-decoration: underline; }
 
-/*# sourceMappingURL=pannel.css.map */
+@media (max-height: 500px) { .search_wrap { height: 260px; }
+  .wrapper { height: 500px; overflow-y: auto; }
+  #search_panel { position: absolute; } }

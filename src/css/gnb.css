@@ -6,6 +6,8 @@
 /** aside **/
 #aside { position: fixed; left: 0; top: 0; height: 100%; width: 70px; background-color: #fff; z-index: 12; }
 
+#nav { height: 100%; }
+
 .navlist li a { display: block; position: relative; text-align: center; padding-top: 46px; padding-bottom: 18px; width: 70px; font-size: 12px; }
 .navlist li a.hmn_mod, .navlist li a.hmn_sports { width: calc(100% - 8px); margin-left: 4px; background-color: #98a9ba; color: #fff; border-radius: 5px; height: 70px; padding-top: 40px; }
 .navlist li a.hmn_mod:hover, .navlist li a.hmn_sports:hover { text-decoration: underline; }
@@ -136,4 +138,6 @@ controls */
 .rbtn_item.on span.skew .img_default { transform: rotate(15deg); }
 .rbtn_item.on span.skew .img_over { transform: rotate(0deg); }
 
-/*# sourceMappingURL=gnb.css.map */
+.mCSB_inside > .mCSB_container { margin: 0; }
+
+.mCSB_scrollTools { width: 10px; }
