@@ -181,10 +181,6 @@ controls
 			transform:scale3d(1,1,1);
 	      	transition:all 0.1s ease-in;
 	    	transition-delay:0.1s;
-			.img_over{
-				display: none;
-			}
-			
 	 	}
  		span{
  			position: absolute;
@@ -264,6 +260,20 @@ controls
  					background-color:#f0f0f0;
  				}
  			}
+ 			&.l1{
+	 			position: relative;
+	 			height: 45px;
+				&:after{
+					position: absolute;
+					z-index: 1;
+					bottom: 0;
+					content:'';
+					display: block;
+					width: 134px;
+					height: 1px;
+					background:#e6e6e6;
+				}
+	 		}
 	 		&.dobule{
 	 			
 	 			li{
@@ -424,7 +434,6 @@ controls
  		@include spr_image(13px,13px,0,-120px)
  	}
  	.r_ibtn{
- 		
  		top: 15px;	
  	}
  	
@@ -435,12 +444,14 @@ controls
 		background-color:#f0f0f0;
 	}
  	span:after{
- 		top:22px;
+ 		top:15px;
  		@include spr_image(13px,1px,0,-150px)
  	}
  	.r_ibtn{
- 		
- 		top: 15px;	
+ 		top: 22px;	
+ 		img{
+ 			vertical-align: top	
+ 		}
  	}
  }
 
@@ -494,4 +505,107 @@ controls
  	}
  }
 
+.item_control .r_ibtn{
+	span{
+		position:relative;
+		display:inline-block;
+		width:auto;
+		bottom:auto;
+		.img_default{
+			opacity:1;
+			position:relative;
+			z-index:2;
+			visibility:visible;
+			top:0;
+		}
+		.img_over{
+			position:absolute;
+			visibility:hidden;
+			opacity:0;
+			top:0;
+			left:0;
+		}
+	}
+}
 
+
+.rbtn_item{
+	&.on{
+		&.reset_btn{
+			span{color:#222 !important;}
+		}
+	}
+	span{
+		&.spin{
+			img{
+				transition:all 0.65s ease-in;
+			}
+			.img_default{
+				transform:rotate(0);
+			}
+			.img_over{
+				transform:rotate(0);
+			}
+		}
+		&.updown{
+			img{
+				transition:all 0.5s ease-in;
+			}
+			.img_default{
+				transform: translateY(0)
+			}
+			.img_over{
+				transform: translateY(-5px);
+			}	
+		}
+		&.skew{
+			img{
+				transition:all 0.8s ease-in;
+			}
+			.img_default{
+				transform:rotate(0deg);
+			}
+			.img_over{
+				transform:rotate(-15deg);
+			}
+		}
+	}
+}
+
+.rbtn_item.on{
+	span{
+		.img_default{
+			opacity:0;
+			visibility:hidden;
+		}
+		.img_over{
+			opacity:1;
+			visibility:visible;
+		}
+		&.spin{
+			.img_default{
+				transform:rotate(-180deg);
+			}
+			.img_over{
+				transform:rotate(180deg);
+			}
+		}
+		&.updown{
+			.img_default{
+				transform: translateY(-5px)
+			}
+			.img_over{
+				transform: translateY(0)
+			}	
+		} 
+		&.skew{
+			.img_default{
+				transform:rotate(15deg);
+			}
+			.img_over{
+				transform:rotate(0deg);
+			}
+		}
+	}
+}
+ 
