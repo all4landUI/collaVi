@@ -940,21 +940,31 @@
                     }
                 });
 
-           
-
+          		
                 $('body .rbtn_item').not('[data-size="reset"]').on("click" , function(e){
                 var el = $(this);
                     if(el.parent().is('.on')){
                         el.parent().removeClass('on')
                         el.removeClass('on');
                     } else {
-                    if(!el.is(".btn_option") && Number($(this).parents("#solo").length) == 1){
-                        $("#map_properties button , #map_properties li").removeClass("on");
-                    } else if(!el.is(".btn_option")){
-                        $("#solo li, #solo button").removeClass("on");
-                    }
-                    el.parent().addClass('on')
-                    el.addClass('on');
+	                    if(!el.is(".btn_option") && Number($(this).parents("#solo").length) == 1){
+
+	                    	// 배경지도 및 로드뷰 클릭시 발생하는 이벤트
+	                        $("#map_properties button , #map_properties li").removeClass("on").removeClass("active");
+	                        el.parents("#solo").siblings(".btn_option").addClass("on").parents("li").addClass("on active");
+
+	                        // 분할지도가 되어있다면,
+	                        if($('.map_slider .s_handle').css('display') == 'block'){
+					          $('.map_slider').mapslider().off().find('.s_left.image').css('width','100%');
+					          $('.s_handle, .s_right.image img').hide(); 
+					        } 
+					        
+	                    } else if(!el.is(".btn_option")){
+	                        $("body #solo li, body #solo button").removeClass("on").removeClass("active");
+	                    }
+
+	                    el.parent().addClass('on');
+	                    el.addClass('on');
                     };
                 });
                 // 초기화함수
