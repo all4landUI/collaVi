@@ -49,7 +49,7 @@
 			display:block;
 			position:relative;
 			text-align:center;
-			padding-top:44px;
+			padding-top:41px;
 			padding-bottom:18px;
 			width:70px;
 			font-size:12px;
@@ -70,7 +70,7 @@
 				margin-top:4px;
 			}
 			&.hmn_mod{
-				margin-top: 8px;
+				margin-top: 18px;
 			}
 			&:after{
 				content:"";
@@ -623,7 +623,4 @@ controls
 }
 .mCSB_scrollTools{
 	width:10px;
-}
-.mCustomScrollBox{
-	padding-bottom: 30px;
 }
