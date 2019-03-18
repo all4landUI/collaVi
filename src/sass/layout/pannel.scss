@@ -116,6 +116,7 @@ body{
 .position_info{
 		padding: 15px 20px 20px 20px ;
 		background: #fafafa;
+		border-top:1px solid #eaeaea;
 		p{
 			padding-left: 17px;
 			font-size: 12px;
@@ -175,6 +176,7 @@ body{
 	height:35px;
 	padding:0 9px 0 9px;
 	font-size:13px;
+	
 	&.block{
 		display:block;
 		width:100%;
@@ -191,7 +193,7 @@ body{
 
 .search_wrap{
 	position:relative;
-	overflow-y:auto;
+	overflow-y:scroll;
 	padding:20px 20px 0;
 	height:calc(100vh - 240px);
 	[role="tabpanel"]{
@@ -214,6 +216,16 @@ body{
 				font-weight:400;
 			}
 		}
+	}
+	#btn__search--reset{
+		position:absolute;
+		right:0;
+		top:0;
+		background:url(../../images/btn_reset.gif) no-repeat 0 0;
+		width:15px;
+		height:15px;
+		display:block;
+		cursor:pointer;
 	}
 	.search_form{
 		.search_window{
@@ -241,8 +253,11 @@ body{
 		&:after{
 			@include clear();
 		}
-		.select{
+		[data-select="form-select"]{
 			float:left;
+			width: 80px;
+		}
+		.select{
 			width:80px;
 		}
 	}
@@ -359,7 +374,7 @@ body{
 					i{
 						@include icon_el(0,0,16px,16px,"bg_addr1.png","true");
 						font-style:normal;
-						font-family:'HDharmonyM';
+						font-family:'HDharmonyB';
 						text-indent:0;
 						font-size:10px;
 						color:#666;

@@ -18,16 +18,11 @@
 	<script src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
     <script src="src/js/libs/mCustomScrollbar/3.1.5/jquery.mCustomScrollbar.min.js"></script>
     <script src="src/js/imgslider.js"></script>
-    
-
 	<!--<script src="src/js/map.js"></script>-->
 	<!--[if lt IE 9]>
 		<script src="src/js/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="src/js/libs/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
-
-
 </head>
 <body>
     <div id="skip">
@@ -175,10 +170,47 @@
                             <!-- .condition_cont -->
                         </div>
 
+                         <!--  2019.03.18 폼 가이드 추가시작 -->
+                        <div class="emptybox">
+                            <div data-select="form-select">
+                                <label for="">대상검색</label>
+                                <select name="" id="" class="select">
+                                    <option value="">대상검색</option>
+                                    <option value="">대상검색</option>
+                                    <option value="">대상검색</option>
+                                </select>
+                            </div>
+                            <div>
+                                <!-- 넓이값은 inline으로 기본100%는 block추가 -->
+                                <input type="text" class="tf_text block" placeholder="">
+                            </div>
+                            <div>
+                                <label class="input_checkbox"><input type="checkbox">1m</label>
+                                <label class="input_checkbox"><input type="checkbox">2m</label>
+                                <label class="input_checkbox"><input type="checkbox">3m</label>
+                                <label class="input_checkbox"><input type="checkbox">4m</label>
+                            </div>
+                            <div>
+                                <label class="input_radio"><input type="radio">1m</label>
+                                <label class="input_radio"><input type="radio">2m</label>
+                                <label class="input_radio"><input type="radio">3m</label>
+                                <label class="input_radio"><input type="radio">4m</label>
+                            </div>
+                            <div>
+                                <input type="file" class="input_file">
+                            </div>
+                            
+                        </div>
+                        <!--  2019.03.18 폼 가이드 추가끝-->
+
+
                         <div class="search_content">
                             <h3 class="blind">검색결과 목록</h3>
                             <div class="search_title">
                                 <h3>검색결과(<em>101건</em>)</h3>
+                                <!-- 2019.03.15 추가 -->
+                                <button role="button" id="btn__search--reset"><span class="blind">검색초기화</span></button>
+                                <!-- 2019.03.15 추가 -->
                             </div>
 
                             <ul class="search_list">
@@ -332,6 +364,8 @@
             <div class="map_slider">
 				<div class="s_left image">
                     <img src="images/dummy.jpg" alt="map">
+
+                    <div class="sample_click" id="call_overlay">예시클릭</div>
 				</div>
 				<div class="s_right image">
                     <img src="images/img_map_air.jpg" alt="map">
@@ -405,7 +439,6 @@
                         </div>
                     </li>
                     <li class="item_control spr_2">
-                       
                         <button role="button" class="btn_option rbtn_item">
                             <div class="r_ibtn">
                                 <span>
@@ -562,7 +595,6 @@
                         </button>                        
                     </li>
                     <li class="item_control spr_7">
-                       
                         <button role="button" class="btn_option rbtn_item">
                             <div class="r_ibtn">
                                 <span class="skew">
@@ -572,7 +604,6 @@
                             </div>
                             <span>길이재기</span>
                         </button>
-                       
                         <div class="item_list size">
                             <ul>
                                 <li>
@@ -611,6 +642,56 @@
                             </ul>
                         </div>
                     </li>
+                    <!-- 2019.03.15 추가 시작-->
+                    <li class="item_control spr_10">
+                        <button role="button" class="btn_option rbtn_item">
+                            <div class="r_ibtn">
+                                <span class="skew">
+                                    <img class="img_default" src="images/r_icon/r_line10_01.png" alt="공간검색 아이콘">
+                                    <img class="img_over" src="images/r_icon/ro_line10_01.png" alt="공간검색 아이콘">
+                                </span>
+                            </div>
+                            <span>공간검색</span>
+                        </button>
+                        <div class="item_list space">
+                            <ul>
+                                <li>
+                                    <button role="button" class="rbtn_item reset_btn" data-space="reset">
+                                        <div class="r_ibtn">
+                                            <span>
+                                                <img class="img_default" src="images/r_icon/r_line07_04.png" alt="초기화 아이콘">
+                                                <img class="img_over" src="images/r_icon/ro_line07_04.png" alt="초기화 아이콘">
+                                            </span>
+                                        </div>
+                                        <span>초기화</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button role="button" class="rbtn_item" data-space="size">
+                                        <div class="r_ibtn">
+                                            <span>
+                                            <img class="img_default" src="images/r_icon/r_line07_03.png" alt="반경측정 아이콘">
+                                            <img class="img_over" src="images/r_icon/ro_line07_03.png" alt="반경측정 아이콘">
+                                            </span>
+                                        </div>
+                                        <span>반경측정</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button role="button" class="rbtn_item" data-space="size">
+                                        <div class="r_ibtn">
+                                            <span>
+                                                <img class="img_default" src="images/r_icon/r_line10_02.png" alt="면적재기 아이콘">
+                                                <img class="img_over" src="images/r_icon/ro_line10_02.png" alt="면적재기 아이콘">
+                                            </span>
+                                        </div>
+                                        <span>영역검색</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 2019.03.15 추가 끝-->
                     <li class="item_control spr_8">
                         <button role="button" class="rbtn_item">
                             <div class="r_ibtn">
@@ -910,11 +991,62 @@
     </section>
     <!-- #moveToCoord -->
 
+    
+    <!-- 2019.03.18 주소 마커 위치 팝업 추가시작-->
+    <section class="overlay_container">
+        <div class="container">
+            <header class="oyerlay_header">
+                <button role="button" class="btn_favorite"><span class="blind">즐겨찾기추가</span></button>
+                <h2 class="load_name">현대엠엔소프트</h2>
+                <button role="button" class="btn__overlay--close"></button>
+            </header>
+
+            <div class="overlay_content">
+                <div class="overlay_addr_a">서울특별시 용산구 원효로 74 현대자동차 원효로 사옥</div>
+                <div class="overlay_addr_b"><span class="mark">지번</span>울산광역시 동구 방어동 13-7</div>
+                <ul class="add_info">
+                    <li class="info_1">02-3483-8500</li>
+                    <li class="info_2">컴퓨터프로그래밍, 정보서비스업</li>
+                    <li>소프트웨어개발</li>
+                </ul>
+            </div>
+
+            <div class="overlay_btn">
+                <a href="#">상세정보</a>
+            </div>
+        </div>
+    </section>
+    <!-- 2019.03.18 주소 마커 위치 팝업 추가끝-->
+    
 
     <script>
         var app = {
-
         	clickEvent : function(){
+                $("#call_overlay").on("click" , function(e){
+                    e.stopPropagation();
+                    var $left = Number($(this).offset().left) + Number($(this).width()/2);
+                    var $top = $(this).offset().top;
+                    $(".overlay_container").css({
+                        left : ($left - 225) +"px",
+                        top  : ($top - 240)+ "px",
+                        optcity : 1
+                    }).show()
+                });
+
+                $(".btn__overlay--close").on("click" , function(e){
+                    $(".overlay_container").hide()
+                });
+
+                $(".btn_favorite").on("click" , function(){
+                    var el = $(this);
+                    if(el.is(".active")){
+                        el.removeClass('active');
+                    } else {
+                        el.addClass('active');
+                    }
+                })
+
+
         		$(".addr_2 button").on("click" , function(){
         			var el = $(this);
         			if(el.parent().is(".active")){
@@ -944,7 +1076,7 @@
                 });
 
           		
-                $('body .rbtn_item').not('[data-size="reset"]').on("click" , function(e){
+                $('body .rbtn_item').not('[data-size="reset"],[data-space="reset"]').on("click" , function(e){
                 var el = $(this);
                     if(el.parent().is('.on')){
                         el.parent().removeClass('on')
@@ -992,7 +1124,28 @@
                     }
                 });
 
-
+                // 2019.03.18 공간검색 초기화 시작
+                $("[data-space='reset']").on("click" , function(){
+                    if($(this).is(".on")){
+                        $("body [data-space='size']").parent("li").removeClass("on");
+                        $("body [data-space='size']").removeClass("on");
+                        $(this).removeClass("on");
+                    }
+                });
+                $("[data-space='size']").on("click" , function(){
+                    var $active = false;
+                    $("[data-space='size']").each(function(){
+                        if($(this).is(".on")){
+                        $active = true;
+                        }
+                    });
+                    if($active === true){
+                        $("[data-space='reset']").addClass("on");
+                    } else {
+                        $("[data-space='reset']").removeClass("on");
+                    }
+                });
+                // 2019.03.18 공간검색 초기화 끝
 
                 $(".attr_menu .menu_title").on("click" , function(){
                     var el = $(this);

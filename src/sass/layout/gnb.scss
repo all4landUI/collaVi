@@ -136,7 +136,7 @@ controls
  	&.active{
  		.item_list{
  			display:block;
- 			z-index: 30px;
+ 			z-index: 30;
  		}
  		&+li{
  		
@@ -254,8 +254,24 @@ controls
  					}
  				}
  			}
-
  		}
+
+ 		&.space{
+ 			width:181px;
+ 			background:url(../../images/bg4.png) no-repeat 0 0;
+ 			ul{
+ 				li{
+ 					&:first-child{
+ 						button{
+ 							span{
+ 								color:#a7a7a7;
+ 							}
+ 						}
+ 					}
+ 				}
+ 			}
+ 		}
+
 
  		ul{
  			overflow:hidden;

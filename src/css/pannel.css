@@ -20,7 +20,7 @@ body { letter-spacing: -0.05em; }
 .search_header .user_util .btn__logout i { display: inline-block; position: absolute; left: 3px; top: 2px; width: 20px; height: 20px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/icon_user_logout.png); font-size: 0; text-indent: -9999em; }
 .search_header:after { content: ""; display: block; overflow: hidden; clear: both; }
 
-.position_info { padding: 15px 20px 20px 20px; background: #fafafa; }
+.position_info { padding: 15px 20px 20px 20px; background: #fafafa; border-top: 1px solid #eaeaea; }
 .position_info p { padding-left: 17px; font-size: 12px; background: url(../../images/position_marker.png) no-repeat; }
 
 .search_cate ul { width: 350px; margin: 0 auto; text-align: center; box-sizing: border-box; overflow: hidden; border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; }
@@ -37,17 +37,19 @@ body { letter-spacing: -0.05em; }
 
 .select { border: 1px solid #ddd; display: inline-block; height: 35px; padding: 0 9px 0 9px; font-size: 13px; }
 
-.search_wrap { position: relative; overflow-y: auto; padding: 20px 20px 0; height: calc(100vh - 240px); }
+.search_wrap { position: relative; overflow-y: scroll; padding: 20px 20px 0; height: calc(100vh - 240px); }
 .search_wrap [role="tabpanel"] { display: none; }
 .search_wrap [role="tabpanel"].active { display: block; }
 .search_wrap .search_title { margin: 0 0 15px; position: relative; }
 .search_wrap .search_title h3 { font-family: 'HDharmonyM'; font-weight: 400; font-size: 16px; }
 .search_wrap .search_title h3 em { color: #666; font-style: normal; font-family: 'HDharmonyM'; font-weight: 400; }
+.search_wrap #btn__search--reset { position: absolute; right: 0; top: 0; background: url(../../images/btn_reset.gif) no-repeat 0 0; width: 15px; height: 15px; display: block; cursor: pointer; }
 .search_wrap .search_form .search_window { display: block; float: left; overflow: hidden; position: relative; margin-left: 5px; width: calc(100% - 85px); }
 .search_wrap .search_form .search_window .tf_text { float: left; width: 100%; }
 .search_wrap .search_form .search_window #btn_fsubmit { float: left; background-color: #2a3a4a; color: #fff; width: 43px; height: 35px; position: absolute; right: 0; top: 0; }
 .search_wrap .search_form:after { content: ""; display: block; overflow: hidden; clear: both; }
-.search_wrap .search_form .select { float: left; width: 80px; }
+.search_wrap .search_form [data-select="form-select"] { float: left; width: 80px; }
+.search_wrap .search_form .select { width: 80px; }
 .search_wrap .condition_search { margin: 20px 0; }
 .search_wrap .condition_search .search_title .condition__btn--control { position: absolute; right: 0; top: 4px; width: 15px; height: 15px; background: url(../../images/btn_condition.gif) no-repeat 0 0; font-size: 0; text-indent: -9999em; display: block; }
 .search_wrap .condition_search .search_title .condition__btn--control.active { background-position: 0 -15px; }
@@ -72,7 +74,7 @@ body { letter-spacing: -0.05em; }
 .search_list .wrap_cont + .wrap_cont { margin-top: 15px; }
 .search_list .wrap_cont .addr_view span { display: block; padding-left: 25px; position: relative; }
 .search_list .wrap_cont .addr_view span.addr_1 { color: #666; font-size: 13px; }
-.search_list .wrap_cont .addr_view span.addr_1 i { display: inline-block; position: absolute; left: 0; top: 0; width: 16px; height: 16px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/bg_addr1.png); font-size: 0; text-indent: -9999em; font-style: normal; font-family: 'HDharmonyM'; text-indent: 0; font-size: 10px; color: #666; text-align: center; line-height: 16px; }
+.search_list .wrap_cont .addr_view span.addr_1 i { display: inline-block; position: absolute; left: 0; top: 0; width: 16px; height: 16px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/bg_addr1.png); font-size: 0; text-indent: -9999em; font-style: normal; font-family: 'HDharmonyB'; text-indent: 0; font-size: 10px; color: #666; text-align: center; line-height: 16px; }
 .search_list .wrap_cont .addr_view span.addr_2 { color: #999; font-size: 13px; margin-top: 5px; }
 .search_list .wrap_cont .addr_view span.addr_2.active button { background-position: 0 -16px; }
 .search_list .wrap_cont .addr_view span.addr_2 button { content: ""; display: inline-block; position: absolute; left: 0; top: 0; width: 16px; height: 16px; background-repeat: no-repeat; background-position: 0 0; background-image: url(../../images/bg_addr2.png); font-size: 0; text-indent: -9999em; }
@@ -98,5 +100,3 @@ body { letter-spacing: -0.05em; }
 @media (max-height: 500px) { .search_wrap { height: 260px; }
   .wrapper { height: 500px; overflow-y: auto; }
   #search_panel { position: absolute; } }
-
-/*# sourceMappingURL=pannel.css.map */
