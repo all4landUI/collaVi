@@ -84,7 +84,8 @@
 
 .overlay_container { will-change: left,right,top,bottom; position: absolute; border: 1px solid #2a3a4a; background: #fff; width: 450px; height: 215px; z-index: 1000; display: none; }
 .overlay_container .container { padding: 20px; position: relative; }
-.overlay_container .container:after { content: ""; display: block; background: url(../../images/arrow_overlay.png) no-repeat 0 0; width: 22px; height: 18px; bottom: -13px; left: 50%; margin-left: -11px; position: absolute; }
+.overlay_container .container:after { content: ""; display: block; background: url(../../images/arrow_overlay.png) no-repeat 0 0; width: 22px; height: 18px; bottom: -13px; left: 50%; margin-left: -11px; position: absolute; vertical-align: top; }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .overlay_container .container:after { bottom: -11px; } }
 .overlay_container .oyerlay_header { position: relative; border-bottom: 2px solid #ddd; padding-bottom: 14px; }
 .overlay_container .oyerlay_header .btn_favorite { transition: background 0.1s ease-in; position: absolute; left: 0; top: 3px; width: 16px; height: 16px; background: url(../../images/ico_favorite_off.png) no-repeat 0 0; }
 .overlay_container .oyerlay_header .btn_favorite.active { background-image: url(../../images/ico_favorite_on.png); }

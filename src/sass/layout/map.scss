@@ -481,7 +481,13 @@
     		left:50%;
     		margin-left:-11px;
     		position:absolute;
+    		vertical-align:top;
     	}
+    	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			&:after{
+				bottom:-11px;
+			 }
+		}
     }
     .oyerlay_header{
     	position:relative;
