@@ -80,7 +80,7 @@
 #moveToCoord .btn_wrap { text-align: center; padding-top: 30px; }
 #moveToCoord .btn_wrap button { color: #fff; font-size: 13px; background-color: #2a3a4a; line-height: 35px; height: 35px; width: 87px; }
 
-.sample_click { position: absolute; left: 80%; top: 50%; z-index: 100; width: 60px; height: 20px; text-align: center; color: #fff; background-color: #000; }
+.sample_marker { position: absolute; left: 80%; top: 50%; z-index: 100; width: 34px; height: 35px; padding: 6px 0 0 8px; color: #fff; font-family: 'HDharmonyM'; font-weight: 400; font-size: 13px; cursor: pointer; background: url(../../images/position_marker2.png) 0 0 no-repeat; }
 
 .overlay_container { will-change: left,right,top,bottom; position: absolute; border: 1px solid #2a3a4a; background: #fff; width: 450px; height: 215px; z-index: 1000; display: none; }
 .overlay_container .container { padding: 20px; position: relative; }

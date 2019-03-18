@@ -89,7 +89,7 @@
                         <div class="search_form">
                             <form action="" method="">
                                 <fieldset>
-                                    <div class="selectbox" data-select="form-select">
+                                    <div class="selectbox h35" data-select="form-select">
                                         <legend class="blind">대상 검색</legend>
                                         <label for="">대상검색</label>
                                         <select name="" id="" class="select">
@@ -156,6 +156,71 @@
                                         <button role="button" class="btn round">시설물선택</button>
                                     </div>
                                 </div>
+                                <!--  2019.03.18 폼 가이드 추가시작 -->
+                                <div class="f_box">
+                                    <ul class="input_wrap">
+                                        <li>
+                                            <dl>
+                                                <dt>반경(m)</dt>
+                                                <dd>
+                                                    <div data-select="form-select">
+                                                        <label for="">대상검색</label>
+                                                        <select name="" id="" class="select">
+                                                            <option value="">대상검색</option>
+                                                            <option value="">대상검색</option>
+                                                            <option value="">대상검색</option>
+                                                        </select>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>반경(m)</dt>
+                                                <dd>
+                                                    <!-- 넓이값은 inline으로 기본100%는 block추가 -->
+                                                    <input type="text" class="tf_text block" placeholder="">
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>반경(m)</dt>
+                                                <dd>
+                                                    <label class="input_checkbox"><input type="checkbox">1m</label>
+                                                    <label class="input_checkbox"><input type="checkbox">2m</label>
+                                                    <label class="input_checkbox"><input type="checkbox">3m</label>
+                                                    <label class="input_checkbox"><input type="checkbox">4m</label>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>반경(m)</dt>
+                                                <dd>
+                                                   <label class="input_radio"><input type="radio" name="t1">1m</label>
+                                                    <label class="input_radio"><input type="radio" name="t2">2m</label>
+                                                    <label class="input_radio"><input type="radio" name="t3">3m</label>
+                                                    <label class="input_radio"><input type="radio" name="t4">4m</label> 
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>반경(m)</dt>
+                                                <dd>
+                                                    <span class="input_file">
+                                                        <input class="file_upload" value="파일선택" disabled="disabled"><!--
+                                                        --><label for="ex_file">업로드</label>
+                                                        <input type="file" id="ex_file">
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--  2019.03.18 폼 가이드 추가끝-->
+
 
                                 <div class="condition_form">
                                     <input type="text" name="" id="" class="tf_text block" placeholder="검색어를 입력해주세요.">
@@ -170,38 +235,7 @@
                             <!-- .condition_cont -->
                         </div>
 
-                         <!--  2019.03.18 폼 가이드 추가시작 -->
-                        <div class="emptybox">
-                            <div data-select="form-select">
-                                <label for="">대상검색</label>
-                                <select name="" id="" class="select">
-                                    <option value="">대상검색</option>
-                                    <option value="">대상검색</option>
-                                    <option value="">대상검색</option>
-                                </select>
-                            </div>
-                            <div>
-                                <!-- 넓이값은 inline으로 기본100%는 block추가 -->
-                                <input type="text" class="tf_text block" placeholder="">
-                            </div>
-                            <div>
-                                <label class="input_checkbox"><input type="checkbox">1m</label>
-                                <label class="input_checkbox"><input type="checkbox">2m</label>
-                                <label class="input_checkbox"><input type="checkbox">3m</label>
-                                <label class="input_checkbox"><input type="checkbox">4m</label>
-                            </div>
-                            <div>
-                                <label class="input_radio"><input type="radio">1m</label>
-                                <label class="input_radio"><input type="radio">2m</label>
-                                <label class="input_radio"><input type="radio">3m</label>
-                                <label class="input_radio"><input type="radio">4m</label>
-                            </div>
-                            <div>
-                                <input type="file" class="input_file">
-                            </div>
-                            
-                        </div>
-                        <!--  2019.03.18 폼 가이드 추가끝-->
+                      
 
 
                         <div class="search_content">
@@ -364,8 +398,7 @@
             <div class="map_slider">
 				<div class="s_left image">
                     <img src="images/dummy.jpg" alt="map">
-
-                    <div class="sample_click" id="call_overlay">예시클릭</div>
+                    <div class="sample_marker" id="call_overlay">A</div>
 				</div>
 				<div class="s_right image">
                     <img src="images/img_map_air.jpg" alt="map">
@@ -433,6 +466,17 @@
                                             </span>
                                         </div>
                                         <span>영상</span>
+                                    </button>                                    
+                                </li>
+                                <li>                                    
+                                    <button role="button" class="rbtn_item">
+                                        <div class="r_ibtn">
+                                            <span>
+                                                <img class="img_default" src="images/r_icon/r_line01_07.png" alt="위성 아이콘">
+                                                <img class="img_over" src="images/r_icon/ro_line01_07.png" alt="위성 아이콘">
+                                            </span>
+                                        </div>
+                                        <span>위성</span>
                                     </button>                                    
                                 </li>
                             </ul>
@@ -594,6 +638,17 @@
                             <span></span>
                         </button>                        
                     </li>
+                    <li class="item_control spr_11">                        
+                        <button role="button" class="rbtn_item" title="초기화">
+                            <div class="r_ibtn">
+                                <span>
+                                    <img class="img_default" src="images/r_icon/r_line11_01.png" alt="초기화 아이콘">
+                                    <img class="img_over" src="images/r_icon/ro_line11_01.png" alt="초기화 아이콘">
+                                </span>
+                            </div>
+                            <span></span>
+                        </button>                        
+                    </li>
                     <li class="item_control spr_7">
                         <button role="button" class="btn_option rbtn_item">
                             <div class="r_ibtn">
@@ -670,11 +725,11 @@
                                     <button role="button" class="rbtn_item" data-space="size">
                                         <div class="r_ibtn">
                                             <span>
-                                            <img class="img_default" src="images/r_icon/r_line07_03.png" alt="반경측정 아이콘">
-                                            <img class="img_over" src="images/r_icon/ro_line07_03.png" alt="반경측정 아이콘">
+                                            <img class="img_default" src="images/r_icon/r_line07_03.png" alt="반경검색 아이콘">
+                                            <img class="img_over" src="images/r_icon/ro_line07_03.png" alt="반경검색 아이콘">
                                             </span>
                                         </div>
-                                        <span>반경측정</span>
+                                        <span>반경검색</span>
                                     </button>
                                 </li>
                                 <li>

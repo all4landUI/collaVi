@@ -176,7 +176,9 @@ body{
 	height:35px;
 	padding:0 9px 0 9px;
 	font-size:13px;
-	
+	&.h29{
+		height:29px;
+	}
 	&.block{
 		display:block;
 		width:100%;
@@ -284,6 +286,9 @@ body{
 	.condition_cont{
 		display:none;	
 	}
+	.f_box{
+		overflow:hidden;
+	}
 	ul.input_wrap{
 			padding-bottom:15px;
 			li{
@@ -307,7 +312,7 @@ body{
 					}
 					dd{
 						width: calc(100% - 85px);
-						input{
+						input[type="text"]{
 							height:29px;
 							width: 100%;
 						}

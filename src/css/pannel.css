@@ -33,6 +33,7 @@ body { letter-spacing: -0.05em; }
 .search_cate ul li:after { content: ""; display: block; overflow: hidden; clear: both; }
 
 .tf_text { border: 1px solid #ddd; display: inline-block; height: 35px; padding: 0 9px 0 9px; font-size: 13px; }
+.tf_text.h29 { height: 29px; }
 .tf_text.block { display: block; width: 100%; }
 
 .select { border: 1px solid #ddd; display: inline-block; height: 35px; padding: 0 9px 0 9px; font-size: 13px; }
@@ -54,13 +55,14 @@ body { letter-spacing: -0.05em; }
 .search_wrap .condition_search .search_title .condition__btn--control { position: absolute; right: 0; top: 4px; width: 15px; height: 15px; background: url(../../images/btn_condition.gif) no-repeat 0 0; font-size: 0; text-indent: -9999em; display: block; }
 .search_wrap .condition_search .search_title .condition__btn--control.active { background-position: 0 -15px; }
 .search_wrap .condition_cont { display: none; }
+.search_wrap .f_box { overflow: hidden; }
 .search_wrap ul.input_wrap { padding-bottom: 15px; }
 .search_wrap ul.input_wrap li + li { margin-top: 6px; }
 .search_wrap ul.input_wrap li dl:after { content: ""; display: block; overflow: hidden; clear: both; }
 .search_wrap ul.input_wrap li dl dd, .search_wrap ul.input_wrap li dl dt { float: left; }
 .search_wrap ul.input_wrap li dl dt { background: url(../../images/blit_condition_list.gif) no-repeat 0 50%; padding-left: 12px; width: 85px; color: #666; font-size: 13px; height: 29px; line-height: 29px; }
 .search_wrap ul.input_wrap li dl dd { width: calc(100% - 85px); }
-.search_wrap ul.input_wrap li dl dd input { height: 29px; width: 100%; }
+.search_wrap ul.input_wrap li dl dd input[type="text"] { height: 29px; width: 100%; }
 .search_wrap .condition_tag { text-align: center; padding: 15px 0; border-top: 1px solid #eaeaea; }
 .search_wrap .condition_tag .btn__group--tag { display: inline-block; }
 .search_wrap .condition_tag .btn__group--tag button { background-color: #cacaca; color: #fff; display: block; float: left; height: 30px; padding-left: 12px; padding-right: 12px; }

@@ -138,9 +138,7 @@ controls
  			display:block;
  			z-index: 30;
  		}
- 		&+li{
- 		
- 		
+ 		&+li{	
  		}
  		.btn_option{
  			&:after{display:none;}
@@ -222,7 +220,7 @@ controls
  		padding:1px 43px 1px 1px;
  		z-index: 10;
  		&.sort{
- 			width:271px;
+ 			width:316px;
  			background:url(../../images/bg1.png) no-repeat 0 0;
  		}
 

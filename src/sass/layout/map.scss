@@ -443,17 +443,20 @@
 	}
 }
 
-.sample_click{
+.sample_marker{
 	position:absolute;
 	left:80%;
 	top:50%;
 	z-index:100;
-	width:60px;
-	height:20px;
-	text-align:center;
+	width:34px;
+	height:35px;
+	padding:6px 0 0 8px;
 	color:#fff;
-	background-color:#000;
-
+	font-family:'HDharmonyM';
+	font-weight:400;
+	font-size:13px;
+	cursor: pointer;
+	background:url(../../images/position_marker2.png) 0 0 no-repeat;
 }
 
 .overlay_container{

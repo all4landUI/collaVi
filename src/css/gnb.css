@@ -57,7 +57,7 @@ controls */
 .item_control .btn_option:after { content: ""; display: block; position: absolute; left: 1px; bottom: 1px; width: 4px; height: 4px; background: url(../../images/hover_mark.png) no-repeat 0 0; }
 .item_control #solo .rbtn_item.on { background: #f0f0f0; }
 .item_control .item_list { display: none; position: absolute; right: -1px; top: -1px; padding: 1px 43px 1px 1px; z-index: 10; }
-.item_control .item_list.sort { width: 271px; background: url(../../images/bg1.png) no-repeat 0 0; }
+.item_control .item_list.sort { width: 316px; background: url(../../images/bg1.png) no-repeat 0 0; }
 .item_control .item_list.load_view { width: 136px; background: url(../../images/bg2.png) no-repeat 0 0; }
 .item_control .item_list.add { width: 181px; height: 91px; background: url(../../images/bg3.png) no-repeat 0 0; }
 .item_control .item_list.size { width: 181px; background: url(../../images/bg4.png) no-repeat 0 0; }
